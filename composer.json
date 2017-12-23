@@ -1,0 +1,32 @@
+{
+  "name": "jaredhowland/gospel-library",
+  "description": "PHP library to access the LDS Gospel Library web service",
+  "keywords": ["lds","mormon","gospel library","scriptures"],
+  "homepage": "http://github.com/jaredhowland/gospel-library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Gospel\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Jared Howland",
+      "homepage": "http://jaredhowland.com",
+      "role": "developer"
+    }
+  ],
+  "require": {
+    "php": "^7.0",
+    "guzzlehttp/guzzle": "^6.0"
+  },
+  "require-dev": {
+    "phpdocumentor/phpdocumentor": "2.*",
+    "phpunit/phpunit": "^6.5"
+  }
+}
