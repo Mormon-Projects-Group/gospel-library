@@ -3,7 +3,7 @@
 ========================
 [WIP] LDS Gospel Library
 ========================
-**This project is not affiliated with, nor endorsed by, the `LDS Church <https://www.lds.org/>`_.**
+**This project is not affiliated with, nor endorsed by, the** `LDS Church <https://www.lds.org/>`_
 
 This small PHP library allows easy access to the `Gospel Library Web Services <https://tech.lds.org/wiki/Gospel_Library_Catalog_Web_Service>`_.
 
@@ -19,8 +19,8 @@ Contribute
 .. |Scrutinizer| image:: https://img.shields.io/scrutinizer/g/Mormon-Projects-Group/gospel-library.svg?style=flat-square
 .. _Scrutinizer: https://scrutinizer-ci.com/g/Mormon-Projects-Group/gospel-library/
 
-.. |StyleCI| image:: https://styleci.io/repos/71304265/shield?branch=dev
-.. _StyleCI: https://styleci.io/repos/71304265
+.. |StyleCI| image:: https://styleci.io/repos/115206912/shield?branch=master
+.. _StyleCI: https://styleci.io/repos/115206912
 
 .. |Packagist| image:: https://img.shields.io/packagist/v/Mormon-Projects-Group/gospel-library.svg?style=flat-square
 .. _Packagist: https://packagist.org/packages/Mormon-Projects-Group/gospel-library

@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types = 1);
 /**
  * App configuration
  *
@@ -27,11 +27,11 @@ class Config
      *
      * @return void
      */
-    public static function setErrorReporting()
+    public static function setErrorReporting(): void
     {
         if (self::get('development')) {
             ini_set('display_errors', '1');
-            ini_set('error_reporting', E_ALL ^ E_NOTICE);
+            ini_set('error_reporting', 'E_ALL ^ E_NOTICE');
         } else {
             ini_set('display_errors', '0');
         }
@@ -44,7 +44,7 @@ class Config
      *
      * @return string Return setting value from `.ini` file
      */
-    public static function get(string $setting)
+    public static function get(string $setting): string
     {
         if (empty(self::$config) && is_array(parse_ini_file('Config.ini'))) {
             self::$config = parse_ini_file('Config.ini');
@@ -62,7 +62,7 @@ class Config
      *
      * @return string Setting value from `.ini` file
      */
-    private static function settingExists(string $setting)
+    private static function settingExists(string $setting): string
     {
         if (isset(self::$config[$setting])) {
             return self::$config[$setting];
