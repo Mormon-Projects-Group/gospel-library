@@ -1,5 +1,4 @@
-<?php declare(strict_types=1);
-
+<?php declare(strict_types = 1);
 /**
  * Client class for getting Gospel Library JSON
  *
@@ -7,15 +6,19 @@
  *   * `catalog.query.folder`
  *   * `book.download`
  *
- * @author  Jared Howland <gospel-library@jaredhowland.com>
- * @version 2017-12-25
- * @since   2017-12-24
+ * @link      https://tech.lds.org/wiki/Gospel_Library_Catalog_Web_Service
+ * @license   https://github.com/Mormon-Projects-Group/gospel-library/blob/master/LICENSE.rst MIT
+ * @copyright Copyright (c) 2018 Jared Howland
+ * @author    Jared Howland <gospel-library@jaredhowland.com>
  */
 
 namespace Gospel;
 
 use GuzzleHttp\Client as GuzzleClient;
 
+/**
+ * Client class for getting Gospel Library JSON
+ */
 class Client
 {
 
@@ -39,24 +42,6 @@ class Client
     public function languagesQuery(): array
     {
         return $this->getUrl('languages.query');
-    }
-
-    /**
-     * Get URL
-     *
-     * @param string $action API call to make
-     * @param array  $args   Array of arguments to pass as HTTP query parameters
-     *
-     * @return array Array of the results of the API call
-     */
-    private function getUrl(string $action, array $args = []): array
-    {
-        $args = array_merge(['action' => $action], $args, ['format' => 'json']);
-        $json = $this->client
-            ->request('GET', Config::get('base'), ['query' => $args])
-            ->getBody();
-
-        return json_decode((string)$json, true);
     }
 
     /**
@@ -112,5 +97,23 @@ class Client
 
         return $this->getUrl('book.versions',
             ['languageid' => $languageid, 'platformid' => $platformid, 'lastdate' => $lastdate]);
+    }
+
+    /**
+     * Get URL
+     *
+     * @param string $action API call to make
+     * @param array  $args   Array of arguments to pass as HTTP query parameters
+     *
+     * @return array Array of the results of the API call
+     */
+    private function getUrl(string $action, array $args = []): array
+    {
+        $args = array_merge(['action' => $action], $args, ['format' => 'json']);
+        $json = $this->client
+            ->request('GET', Config::get('base'), ['query' => $args])
+            ->getBody();
+
+        return json_decode((string)$json, true);
     }
 }

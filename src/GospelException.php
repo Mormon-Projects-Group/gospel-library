@@ -1,10 +1,10 @@
 <?php declare(strict_types = 1);
 /**
- * Gospel Exception
+ * GospelException class for `Gospel` namespace. Extends global `Exception` class.
  *
- * @author  Jared Howland <gospel-library@jaredhowland.com>
- * @version 2017-12-25
- * @since   2017-12-25
+ * @license   https://github.com/Mormon-Projects-Group/gospel-library/blob/master/LICENSE.rst MIT
+ * @copyright Copyright (c) 2018 Jared Howland
+ * @author    Jared Howland <gospel-library@jaredhowland.com>
  */
 
 namespace Gospel;

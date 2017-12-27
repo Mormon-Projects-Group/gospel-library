@@ -1,17 +1,16 @@
 <?php declare(strict_types = 1);
 /**
- * App configuration
+ * Application configuration class to import `Config.ini` file and set other defaults
  *
- * @author  Jared Howland <gospel-library@jaredhowland.com>
- * @version 2017-12-23
- * @since   2017-12-23
- *
+ * @license   https://github.com/Mormon-Projects-Group/gospel-library/blob/master/LICENSE.rst MIT
+ * @copyright Copyright (c) 2018 Jared Howland
+ * @author    Jared Howland <gospel-library@jaredhowland.com>
  */
 
 namespace Gospel;
 
 /**
- * Configuration class to import `Config.ini` file and set other defaults
+ * Application configuration class to import `Config.ini` file and set other defaults
  */
 class Config
 {
