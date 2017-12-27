@@ -1,9 +1,10 @@
 <?php declare(strict_types = 1);
+
 /**
  * Application configuration class to import `Config.ini` file and set other defaults
  *
- * @license   https://github.com/Mormon-Projects-Group/gospel-library/blob/master/LICENSE.rst MIT
  * @copyright Copyright (c) 2018 Jared Howland
+ * @license   http://www.opensource.org/licenses/mit-license.php MIT
  * @author    Jared Howland <gospel-library@jaredhowland.com>
  */
 

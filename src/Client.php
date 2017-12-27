@@ -1,4 +1,5 @@
 <?php declare(strict_types = 1);
+
 /**
  * Client class for getting Gospel Library JSON
  *
@@ -7,8 +8,9 @@
  *   * `book.download`
  *
  * @link      https://tech.lds.org/wiki/Gospel_Library_Catalog_Web_Service
- * @license   https://github.com/Mormon-Projects-Group/gospel-library/blob/master/LICENSE.rst MIT
+ *
  * @copyright Copyright (c) 2018 Jared Howland
+ * @license   http://www.opensource.org/licenses/mit-license.php MIT
  * @author    Jared Howland <gospel-library@jaredhowland.com>
  */
 
