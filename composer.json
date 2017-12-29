@@ -1,8 +1,8 @@
 {
-  "name": "jaredhowland/gospel-library",
+  "name": "Mormon-Projects-Group/gospel-library",
   "description": "PHP library to access the LDS Gospel Library web service",
   "keywords": ["lds","mormon","gospel library","scriptures"],
-  "homepage": "http://github.com/jaredhowland/gospel-library",
+  "homepage": "http://github.com/Mormon-Projects-Group/gospel-library",
   "license": "MIT",
   "autoload": {
     "psr-4": {
@@ -28,5 +28,9 @@
   "require-dev": {
     "phpdocumentor/phpdocumentor": "2.*",
     "phpunit/phpunit": "^6.5"
+  },
+  "scripts": {
+    "test": "./vendor/bin/phpunit",
+    "doc": "./vendor/bin/phpdoc"
   }
 }
