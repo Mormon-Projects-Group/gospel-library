@@ -67,13 +67,13 @@ class Catalog
      *
      * @return \DateTime object of the last time the catalog was modified
      */
-    public function getModifiedDate(): ?\DateTime
+    public function getModifiedDate(): \DateTime
     {
         $date = $this->array['catalog']['date_changed'];
-        if (\DateTime::createFromFormat('Y-m-d H:i:s', $date) !== false) {
+        if (\DateTime::createFromFormat('Y-m-d H:i:s', $date)) {
             return \DateTime::createFromFormat('Y-m-d H:i:s', $date);
         } else {
-            throw new GospelException('Invalid date used for `getModifiedDate`: '.$this->array['catalog']['date_changed']);
+            throw new GospelException('Invalid date used for `getModifiedDate`: '.$date);
         }
     }
 

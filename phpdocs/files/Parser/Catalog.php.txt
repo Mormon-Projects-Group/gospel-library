@@ -12,13 +12,15 @@
 
 namespace Gospel\Parser;
 
+use Gospel\GospelException;
+
 /**
  * Catalog parser class for parsing catalog JSON
  */
 class Catalog
 {
-    /** @var string JSON to parse */
-    private $json;
+    /** @var array JSON data as associative array to parse */
+    private $array;
 
     /** @var array Catalog data */
     private $catalogData;
@@ -35,12 +37,12 @@ class Catalog
     /**
      * Construct Client class
      *
-     * @param string $json JSON to parse
+     * @param array $array Array to parse
      */
-    public function __construct(string $json)
+    public function __construct(array $array)
     {
-        $this->json = $json;
-        $this->catalogData = json_decode($this->json, true)['catalog']['folders'];
+        $this->array = $array;
+        $this->catalogData = $this->array['catalog']['folders'];
         $this->parseData();
     }
 
@@ -53,7 +55,7 @@ class Catalog
      */
     public function getSuccessStatus(): bool
     {
-        return json_decode($this->json, true)['success'];
+        return $this->array['success'];
     }
 
     /**
@@ -61,13 +63,18 @@ class Catalog
      *
      * @param null
      *
-     * @return object `\DateTime` object of the last time the catalog was modfied
+     * @throws GospelException if date is invalid
+     *
+     * @return \DateTime object of the last time the catalog was modified
      */
-    public function getModifiedDate(): \DateTime
+    public function getModifiedDate(): ?\DateTime
     {
-        $date = json_decode($this->json, true)['catalog']['date_changed'];
-
-        return \DateTime::createFromFormat('Y-m-d H:i:s', $date);
+        $date = $this->array['catalog']['date_changed'];
+        if (\DateTime::createFromFormat('Y-m-d H:i:s', $date)) {
+            return \DateTime::createFromFormat('Y-m-d H:i:s', $date);
+        } else {
+            throw new GospelException('Invalid date used for `getModifiedDate`: '.$date);
+        }
     }
 
     /**
@@ -79,7 +86,7 @@ class Catalog
      */
     public function getCatalogName(): string
     {
-        return json_decode($this->json, true)['catalog']['name'];
+        return $this->array['catalog']['name'];
     }
 
     /**
@@ -128,7 +135,7 @@ class Catalog
     {
         $array = empty($array) ? $this->catalogData : $array;
         foreach ($array as $folder) {
-            $this->folders[$folder['id']] = ['name' => $folder['name'], 'displayOrder' => $folder['display_order'], 'englishName' => $folder['eng_name'], 'languageId' => @$folder['landguageid'], 'parentFolderId' => $parentFolderId];
+            $this->folders[$folder['id']] = ['parentFolderId' => $parentFolderId, 'languageId' => @$folder['landguageid'], 'name' => $folder['name'], 'displayOrder' => $folder['display_order'], 'englishName' => $folder['eng_name']];
             $this->parseBooks($folder['books'], $folder['id']);
             if (!empty($folder['folders'])) {
                 $this->parseData($folder['folders'], $folder['id']);
