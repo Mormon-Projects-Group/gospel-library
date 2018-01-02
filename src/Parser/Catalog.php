@@ -70,10 +70,11 @@ class Catalog
     public function getModifiedDate(): \DateTime
     {
         $date = $this->array['catalog']['date_changed'];
-        if (\DateTime::createFromFormat('Y-m-d H:i:s', $date)) {
-            return \DateTime::createFromFormat('Y-m-d H:i:s', $date);
+        $dateObject = \DateTime::createFromFormat('Y-m-d H:i:s', $date);
+        if (empty(\DateTime::getLastErrors())) {
+            return $dateObject;
         } else {
-            throw new GospelException('Invalid date used for `getModifiedDate`: '.$date);
+            throw new GospelException('Invalid date used for `getModifiedDate` in class `'.__CLASS__.'``: '.$date);
         }
     }
 

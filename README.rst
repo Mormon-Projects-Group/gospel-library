@@ -23,7 +23,7 @@ There are currently five (5) valid API actions for the `LDS Gospel Library <http
 * ``book.versions``
     * List of books updated since a given date for the specified language and platform
 
-All of the following methods return an array.
+All of the following methods return an array:
 
 Languages
 ---------
@@ -66,7 +66,7 @@ Result:
               2 =>
                 array (size=7)
                   'id' => int 63
-                  'name' => string 'አማርኛ' (length=12)
+                  'name' => string '\u12a0\u121b\u122d\u129b' (length=12)
                   'eng_name' => string 'Amharic' (length=7)
                   'code' => string 'am' (length=2)
                   'code_three' => string 'amh' (length=3)
@@ -318,7 +318,7 @@ Date the catalog for a specified language and platform was last updated.
 
 Result:
 
-.. code-block: php
+.. code-block:: php
 
     <?php
         array (size=3)
