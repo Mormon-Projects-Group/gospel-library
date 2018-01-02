@@ -12,16 +12,18 @@ Gospel Library Client
 =====================
 There are currently five (5) valid API actions for the `LDS Gospel Library <https://www.lds.org/pages/mobileapps/gospellibrary?lang=eng>`_:
 
-    * ``languages.query``
-        * List of languages for which the library exists
-    * ``platforms.query``
-        * List of valid platforms for which the library exists
-    * ``catalog.query``
-        * List of the catalog content for the specified language and platform
-    * ``catalog.query.modified``
-        * Date the catalog for a specified language and platform was last updated
-    * ``book.versions``
-        * List of books updated since a given date for the specified language and platform
+* ``languages.query``
+    * List of languages for which the library exists
+* ``platforms.query``
+    * List of valid platforms for which the library exists
+* ``catalog.query``
+    * List of the catalog content for the specified language and platform
+* ``catalog.query.modified``
+    * Date the catalog for a specified language and platform was last updated
+* ``book.versions``
+    * List of books updated since a given date for the specified language and platform
+
+All of the following methods return an array.
 
 Languages
 ---------
@@ -51,7 +53,6 @@ Catalog
     <?php
         $client = new Gospel\Client;
         // Params: Language ID, Platform ID
-        // Return: array
         $results = $client->catalogQuery(1, 1);
     ?>
 
@@ -63,7 +64,6 @@ Catalog Modified
     <?php
         $client = new Gospel\Client;
         // Params: Language ID, Platform ID
-        // Return: array
         $results = $client->catalogQueryModified(1, 1);
     ?>
 
@@ -74,10 +74,52 @@ Book Versions
 
     <?php
         $client = new Gospel\Client;
-        // Params: Language ID, Platform ID
-        // Return: array
-        $results = $client->bookVersions(1, 1, '2018-01-02');
+        // Params: Language ID, Platform ID, Date
+        $results = $client->bookVersions(1, 1, '2016-09-02');
+        var_dump($results);
     ?>
+
+Result:
+
+.. code-block:: php
+
+    <?php
+        array (size=1)
+          'books' =>
+            array (size=8)
+              0 =>
+                array (size=2)
+                  'id' => int 76447
+                  'version' => int 1
+              1 =>
+                array (size=2)
+                  'id' => int 76448
+                  'version' => int 1
+              2 =>
+                array (size=2)
+                  'id' => int 76449
+                  'version' => int 1
+              3 =>
+                array (size=2)
+                  'id' => int 76450
+                  'version' => int 1
+              4 =>
+                array (size=2)
+                  'id' => int 76451
+                  'version' => int 1
+              5 =>
+                array (size=2)
+                  'id' => int 76452
+                  'version' => int 1
+              6 =>
+                array (size=2)
+                  'id' => int 76453
+                  'version' => int 1
+              7 =>
+                array (size=2)
+                  'id' => int 76454
+                  'version' => int 1
+            ?>
 
 =======
 Parsers
