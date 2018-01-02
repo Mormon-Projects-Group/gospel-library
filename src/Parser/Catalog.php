@@ -71,7 +71,6 @@ class Catalog
     {
         $date = $this->array['catalog']['date_changed'];
         if (\DateTime::createFromFormat('Y-m-d H:i:s', $date)) {
-
             return \DateTime::createFromFormat('Y-m-d H:i:s', $date);
         } else {
             throw new GospelException('Invalid date used for `getModifiedDate`: '.$this->array['catalog']['date_changed']);
