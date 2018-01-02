@@ -12,12 +12,14 @@
 
 namespace Gospel\Parser;
 
+use Gospel\GospelException;
+
 /**
  * Catalog parser class for parsing catalog JSON
  */
 class Catalog
 {
-    /** @var string JSON to parse */
+    /** @var array JSON data as associative array to parse */
     private $array;
 
     /** @var array Catalog data */
@@ -61,13 +63,19 @@ class Catalog
      *
      * @param null
      *
-     * @return object `\DateTime` object of the last time the catalog was modfied
+     * @throws GospelException if date is invalid
+     *
+     * @return \DateTime object of the last time the catalog was modified
      */
     public function getModifiedDate(): \DateTime
     {
         $date = $this->array['catalog']['date_changed'];
+        if (\DateTime::createFromFormat('Y-m-d H:i:s', $date)) {
 
-        return \DateTime::createFromFormat('Y-m-d H:i:s', $date);
+            return \DateTime::createFromFormat('Y-m-d H:i:s', $date);
+        } else {
+            throw new GospelException('Invalid date used for `getModifiedDate`: '.$this->array['catalog']['date_changed']);
+        }
     }
 
     /**
