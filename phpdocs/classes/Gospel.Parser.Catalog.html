@@ -144,28 +144,28 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1175462800"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1062124728"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-1175462800" class="accordion-body collapse in">
+            <div id="namespace-1062124728" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1386891045"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2047987249"></a>
                                 <a href="../namespaces/Gospel.html" style="margin-left: 30px; padding-left: 0">Gospel</a>
             </div>
-            <div id="namespace-1386891045" class="accordion-body collapse ">
+            <div id="namespace-2047987249" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1286237332"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1387200419"></a>
                                 <a href="../namespaces/Gospel.Parser.html" style="margin-left: 30px; padding-left: 0">Parser</a>
             </div>
-            <div id="namespace-1286237332" class="accordion-body collapse ">
+            <div id="namespace-1387200419" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -260,7 +260,7 @@
                                                                     <a href="../classes/Gospel.Parser.Catalog.html#method_parseFiles" class="">parseFiles()</a><br />
                                                             </section>
                             <section class="span4">
-                                                                    <a href="../classes/Gospel.Parser.Catalog.html#property_json" class="">$json</a><br />
+                                                                    <a href="../classes/Gospel.Parser.Catalog.html#property_array" class="">$array</a><br />
                                                                     <a href="../classes/Gospel.Parser.Catalog.html#property_catalogData" class="">$catalogData</a><br />
                                                                     <a href="../classes/Gospel.Parser.Catalog.html#property_folders" class="">$folders</a><br />
                                                                     <a href="../classes/Gospel.Parser.Catalog.html#property_books" class="">$books</a><br />
@@ -308,16 +308,16 @@
 
                                                                     <div class="row-fluid">
         <div class="span8 content class">
-            <a id="property_json" name="property_json" class="anchor"></a>
+            <a id="property_array" name="property_array" class="anchor"></a>
             <article class="property">
-                <h3 class="private ">$json</h3>
-                <pre class="signature">$json : string</pre>
+                <h3 class="private ">$array</h3>
+                <pre class="signature">$array : array</pre>
                 <p><em></em></p>
                 
 
                                 <h4>Type</h4>
-                string
-                &mdash; JSON to parse                            </article>
+                array
+                &mdash; JSON data as associative array to parse                            </article>
         </div>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
@@ -439,16 +439,16 @@
             <article class="method">
                 <h3 class="public ">__construct()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">__construct(string  <span class="argument">$json</span>) </pre>
+                <pre class="signature" style="margin-right: 54px;">__construct(array  <span class="argument">$array</span>) </pre>
                 <p><em>Construct Client class</em></p>
                 
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
                                                     <tr>
-                                <td>string</td>
-                                <td>$json </td>
-                                <td><p>JSON to parse</p></td>
+                                <td>array</td>
+                                <td>$array </td>
+                                <td><p>Array to parse</p></td>
                             </tr>
                                             </table>
                 
@@ -502,15 +502,20 @@
             <article class="method">
                 <h3 class="public ">getModifiedDate()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getModifiedDate() : object</pre>
+                <pre class="signature" style="margin-right: 54px;">getModifiedDate() : \DateTime</pre>
                 <p><em>Date catalog was last modified</em></p>
                 
 
                 
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Gospel\GospelException</dt>
+                            <dd><p>if date is invalid</p></dd>
+                                                                    </dl>
                 
                                     <h4>Returns</h4>
-                    object
-                                            &mdash; <p><code>\DateTime</code> object of the last time the catalog was modfied</p>
+                    \DateTime
+                                            &mdash; <p>object of the last time the catalog was modified</p>
                                     				
                             </article>
         </div>
@@ -575,7 +580,9 @@
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                                                            </dl>
+                                                                                            <dt>See also</dt>
+                                                                <dd><a href="http://mikehillyer.com/articles/managing-hierarchical-data-in-mysql/"><span class="namespace-wrapper">http://mikehillyer.com/articles/managing-hierarchical-data-in-mysql/</span></a></dd>
+                                                                </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr><td colspan="2"><em>None found</em></td></tr>
@@ -604,7 +611,9 @@
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                                                            </dl>
+                                                                                            <dt>See also</dt>
+                                                                <dd><a href="http://mikehillyer.com/articles/managing-hierarchical-data-in-mysql/"><span class="namespace-wrapper">http://mikehillyer.com/articles/managing-hierarchical-data-in-mysql/</span></a></dd>
+                                                                </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr><td colspan="2"><em>None found</em></td></tr>
@@ -633,7 +642,9 @@
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                                                            </dl>
+                                                                                            <dt>See also</dt>
+                                                                <dd><a href="http://mikehillyer.com/articles/managing-hierarchical-data-in-mysql/"><span class="namespace-wrapper">http://mikehillyer.com/articles/managing-hierarchical-data-in-mysql/</span></a></dd>
+                                                                </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr><td colspan="2"><em>None found</em></td></tr>
@@ -808,7 +819,7 @@
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on January 1st, 2018 at 23:53.
+                    on January 2nd, 2018 at 23:40.
                 </section>
             </section>
         </section>

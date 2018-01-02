@@ -71,7 +71,8 @@ class Catalog
     {
         $date = $this->array['catalog']['date_changed'];
         $dateObject = \DateTime::createFromFormat('Y-m-d H:i:s', $date);
-        if (empty(\DateTime::getLastErrors())) {
+        $errors = \DateTime::getLastErrors();
+        if (empty($errors['warning_count'])) {
             return $dateObject;
         } else {
             throw new GospelException('Invalid date used for `getModifiedDate` in class `'.__CLASS__.'``: '.$date);
@@ -93,6 +94,8 @@ class Catalog
     /**
      * Get all folders in an adjacency list model for hierarchical data
      *
+     * @link http://mikehillyer.com/articles/managing-hierarchical-data-in-mysql/
+     *
      * @param null
      *
      * @return array Flattened array of folder data in an adjacency list model for hierarchical data
@@ -105,6 +108,8 @@ class Catalog
     /**
      * Get all books in an adjacency list model for hierarchical data
      *
+     * @link http://mikehillyer.com/articles/managing-hierarchical-data-in-mysql/
+     *
      * @param null
      *
      * @return array Flattened array of books data in an adjacency list model for hierarchical data
@@ -116,6 +121,8 @@ class Catalog
 
     /**
      * Get all files in an adjacency list model for hierarchical data
+     *
+     * @link http://mikehillyer.com/articles/managing-hierarchical-data-in-mysql/
      *
      * @param null
      *
