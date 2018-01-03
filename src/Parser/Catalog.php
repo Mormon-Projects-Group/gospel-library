@@ -72,7 +72,7 @@ class Catalog
         $date = $this->object->catalog->date_changed;
         $dateObject = \DateTime::createFromFormat('Y-m-d H:i:s', $date);
         $errors = \DateTime::getLastErrors();
-        if (empty($errors['warning_count']) && is_a($dateObject, '\DateTime', false)) {
+        if ($dateObject !== false && empty($errors['warning_count'])) {
             return $dateObject;
         } else {
             throw new GospelException('Invalid date used for `getModifiedDate` in class `'.__CLASS__.'``: '.$date);
