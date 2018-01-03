@@ -115,7 +115,7 @@ class Client
      */
     public function getUrl(string $url, array $args = []): string
     {
-        return (string) $this->client
+        return (string)$this->client
             ->request('GET', $url, ['query' => $args])
             ->getBody();
     }
