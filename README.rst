@@ -23,7 +23,7 @@ There are currently five (5) valid API actions for the `LDS Gospel Library <http
 * ``book.versions``
     * List of books updated since a given date for the specified language and platform
 
-All of the following methods return an array:
+All of the following methods return an object:
 
 Languages
 ---------
@@ -228,91 +228,91 @@ Result:
     <?php
         stdClass Object
         (
-            [catalog] => stdClass Object
+          [catalog] => stdClass Object
+           (
+            [folders] => Array
                 (
-                    [folders] => Array
-                        (
+                 [0] => stdClass Object
+                  (
+                   [display_order] => 0
+                   [name] => Scriptures
+                   [eng_name] =>
+                   [id] => 1
+                   [languageid] => 1
+                   [daysexpire] => 0
+                   [download_all] =>
+                   [folders] => Array
+                    (
+                        [0] => stdClass Object
+                         (
+                          [display_order] => 0
+                          [name] => Study Helps
+                          [eng_name] =>
+                          [id] => 2
+                          [languageid] => 1
+                          [isprivate] => 0
+                          [download_all] =>
+                          [daysexpire] => 0
+                          [folders] => Array
+                           (
+                           )
+
+                          [books] => Array
+                           (
                             [0] => stdClass Object
                                 (
-                                    [display_order] => 0
-                                    [name] => Scriptures
-                                    [eng_name] =>
-                                    [id] => 1
-                                    [languageid] => 1
-                                    [daysexpire] => 0
-                                    [download_all] =>
-                                    [folders] => Array
-                                        (
-                                            [0] => stdClass Object
-                                                (
-                                                    [display_order] => 0
-                                                    [name] => Study Helps
-                                                    [eng_name] =>
-                                                    [id] => 2
-                                                    [languageid] => 1
-                                                    [isprivate] => 0
-                                                    [download_all] =>
-                                                    [daysexpire] => 0
-                                                    [folders] => Array
-                                                        (
-                                                        )
-
-                                                    [books] => Array
-                                                        (
-                                                            [0] => stdClass Object
-                                                                (
-                                                                    [name] => Topical Guide
-                                                                    [full_name] => Topical Guide
-                                                                    [description] =>
-                                                                    [gl_uri] => /scriptures/tg
-                                                                    [url] => http://broadcast3.lds.org/crowdsource/Mobile/glweb2/1/1/TG.9.zbook
-                                                                    [display_order] => 0
-                                                                    [version] => 8
-                                                                    [file_version] => 9
-                                                                    [file] => TG.9.zbook
-                                                                    [dateadded] => 2010-06-23 16:28:49
-                                                                    [datemodified] => 2013-02-28 22:00:54
-                                                                    [id] => 7
-                                                                    [cb_id] => 7
-                                                                    [media_available] => 0
-                                                                    [obsolete] =>
-                                                                    [size] => 2248470
-                                                                    [size_index] => 2969366
-                                                                )
-
-                                                            [1] => stdClass Object
-                                                                (
-                                                                    [name] => Bible Dictionary
-                                                                    [full_name] => Bible Dictionary
-                                                                    [description] => This dictionary has been designed to provide teachers and students with a concise collection of definitions and explanations of items that are mentioned in or are otherwise associated with the Bible. It is based primarily upon the biblical text, supplemented by information from the other books of scripture accepted as standard works by The Church of Jesus Christ of Latter-day Saints. It is not intended as an official or revealed endorsement by the Church of the doctrinal, historical, cultural, and other matters set forth. Many of the items have been drawn from the best available scholarship of the world and are subject to reevaluation based on new research and discoveries or on new revelation. The topics have been carefully selected and are treated briefly. If an elaborate discussion is desired, the student should consult a more exhaustive dictionary.
-                                                                    [gl_uri] => /scriptures/bd
-                                                                    [url] => http://broadcast3.lds.org/crowdsource/Mobile/glweb2/1/1/BD.9.zbook
-                                                                    [display_order] => 1
-                                                                    [version] => 8
-                                                                    [file_version] => 9
-                                                                    [file] => BD.9.zbook
-                                                                    [dateadded] => 2010-06-23 16:29:13
-                                                                    [datemodified] => 2013-02-28 22:01:29
-                                                                    [id] => 8
-                                                                    [cb_id] => 8
-                                                                    [media_available] => 0
-                                                                    [obsolete] =>
-                                                                    [size] => 552203
-                                                                    [size_index] => 765119
-                                                                )
-                                                        )
-                                                )
-                                        )
+                                 [name] => Topical Guide
+                                 [full_name] => Topical Guide
+                                 [description] =>
+                                 [gl_uri] => /scriptures/tg
+                                 [url] => http://broadcast3.lds.org/crowdsource/Mobile/glweb2/1/1/TG.9.zbook
+                                 [display_order] => 0
+                                 [version] => 8
+                                 [file_version] => 9
+                                 [file] => TG.9.zbook
+                                 [dateadded] => 2010-06-23 16:28:49
+                                 [datemodified] => 2013-02-28 22:00:54
+                                 [id] => 7
+                                 [cb_id] => 7
+                                 [media_available] => 0
+                                 [obsolete] =>
+                                 [size] => 2248470
+                                 [size_index] => 2969366
                                 )
-                        )
-                    …etc
-                    [name] => All English content
-                    [date_changed] => 2016-09-06 15:09:08
-                    [display_order] => 0
-                )
 
-            [success] => 1
-        )
+                            [1] => stdClass Object
+                                (
+                                 [name] => Bible Dictionary
+                                 [full_name] => Bible Dictionary
+                                 [description] => This dictionary has been designed to provide teachers and students with a concise collection of definitions and explanations of items that are mentioned in or are otherwise associated with the Bible. It is based primarily upon the biblical text, supplemented by information from the other books of scripture accepted as standard works by The Church of Jesus Christ of Latter-day Saints. It is not intended as an official or revealed endorsement by the Church of the doctrinal, historical, cultural, and other matters set forth. Many of the items have been drawn from the best available scholarship of the world and are subject to reevaluation based on new research and discoveries or on new revelation. The topics have been carefully selected and are treated briefly. If an elaborate discussion is desired, the student should consult a more exhaustive dictionary.
+                                 [gl_uri] => /scriptures/bd
+                                 [url] => http://broadcast3.lds.org/crowdsource/Mobile/glweb2/1/1/BD.9.zbook
+                                 [display_order] => 1
+                                 [version] => 8
+                                 [file_version] => 9
+                                 [file] => BD.9.zbook
+                                 [dateadded] => 2010-06-23 16:29:13
+                                 [datemodified] => 2013-02-28 22:01:29
+                                 [id] => 8
+                                 [cb_id] => 8
+                                 [media_available] => 0
+                                 [obsolete] =>
+                                 [size] => 552203
+                                 [size_index] => 765119
+                             )
+                          )
+                       )
+                    )
+                 )
+              )
+            …etc
+            [name] => All English content
+            [date_changed] => 2016-09-06 15:09:08
+            [display_order] => 0
+           )
+
+           [success] => 1
+         )
     ?>
 
 Catalog Modified
@@ -407,7 +407,7 @@ Parses data returned by the ``catalogQuery()`` method.
     <?php
         $client = new Gospel\Client;
         // Params: Language ID, Platform ID
-        // Return: array
+        // Return: stdObject object
         $results = $client->catalogQuery(1, 1);
 
         $parser = new Gospel\Parser\Catalog($results);
@@ -418,11 +418,11 @@ Parses data returned by the ``catalogQuery()`` method.
         $modifiedDate = $parser->getModifiedDate();
         // Return: string
         $catalogName = $parser->getCatalogName();
-        // Return: array (flattened) in an adjacency list model for hierarchical data
+        // Return: stdObject Object containing an adjacency list model for hierarchical data
         $folders = $parser->getFolders();
-        // Return: array (flattened) in an adjacency list model for hierarchical data
+        // Return: stdObject Object containing an adjacency list model for hierarchical data
         $books = $parser->getBooks();
-        // Return: array (flattened) in an adjacency list model for hierarchical data
+        // Return: stdObject Object containing an adjacency list model for hierarchical data
         $files = $parser->getFiles();
     ?>
 

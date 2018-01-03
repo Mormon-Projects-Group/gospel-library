@@ -72,7 +72,7 @@ class Catalog
         $date = $this->object->catalog->date_changed;
         $dateObject = \DateTime::createFromFormat('Y-m-d H:i:s', $date);
         $errors = \DateTime::getLastErrors();
-        if (empty($errors['warning_count']) && is_a($dateObject, '\DateTime', false)) {
+        if ($dateObject !== false && empty($errors['warning_count'])) {
             return $dateObject;
         } else {
             throw new GospelException('Invalid date used for `getModifiedDate` in class `'.__CLASS__.'``: '.$date);
@@ -102,7 +102,7 @@ class Catalog
      */
     public function getFolders(): \stdClass
     {
-        return $this->folders;
+        return (object)$this->folders;
     }
 
     /**
@@ -116,7 +116,7 @@ class Catalog
      */
     public function getBooks(): \stdClass
     {
-        return $this->books;
+        return (object)$this->books;
     }
 
     /**
@@ -130,7 +130,7 @@ class Catalog
      */
     public function getFiles(): \stdClass
     {
-        return $this->files;
+        return (object)$this->files;
     }
 
     /**
@@ -143,10 +143,10 @@ class Catalog
     {
         $object = empty($object) ? $this->catalogData : $object;
         foreach ($object as $folder) {
-            $this->folders[$folder->id] = (object) ['parentFolderId' => $parentFolderId, 'languageId' => @$folder->landguageid, 'name' => $folder->name, 'displayOrder' => $folder->display_order, 'englishName' => $folder->eng_name];
-            $this->parseBooks((object) $folder->books, $folder->id);
+            $this->folders[$folder->id] = (object)['parentFolderId' => $parentFolderId, 'languageId' => @$folder->landguageid, 'name' => $folder->name, 'displayOrder' => $folder->display_order, 'englishName' => $folder->eng_name];
+            $this->parseBooks((object)$folder->books, $folder->id);
             if (!empty($folder->folders)) {
-                $this->parseData((object) $folder->folders, $folder->id);
+                $this->parseData((object)$folder->folders, $folder->id);
             }
         }
     }
@@ -161,7 +161,7 @@ class Catalog
     {
         if (!empty($books)) {
             foreach ($books as $book) {
-                $this->books[$book->id] = (object) ['folderId' => $folderId, 'name' => $book->name, 'fullName' => $book->full_name, 'description' => $book->description, 'gospelLibraryUri' => $book->gl_uri, 'url' => $book->url, 'displayOrder' => $book->display_order, 'version' => $book->version, 'fileVersion' => $book->file_version, 'file' => $book->file, 'dateAdded' => $book->dateadded, 'dateModified' => $book->datemodified, 'cbId' => $book->cb_id, 'mediaAvailable' => $book->media_available, 'obsolete' => $book->obsolete, 'size' => $book->size, 'sizeIndex' => $book->size_index];
+                $this->books[$book->id] = (object)['folderId' => $folderId, 'name' => $book->name, 'fullName' => $book->full_name, 'description' => $book->description, 'gospelLibraryUri' => $book->gl_uri, 'url' => $book->url, 'displayOrder' => $book->display_order, 'version' => $book->version, 'fileVersion' => $book->file_version, 'file' => $book->file, 'dateAdded' => $book->dateadded, 'dateModified' => $book->datemodified, 'cbId' => $book->cb_id, 'mediaAvailable' => $book->media_available, 'obsolete' => $book->obsolete, 'size' => $book->size, 'sizeIndex' => $book->size_index];
                 $this->parseFiles(@$book->files, $book->id);
             }
         }
@@ -178,7 +178,7 @@ class Catalog
         if (!empty($files)) {
             // Currently, Gospel Library only includes PDF files
             foreach ($files->PDF as $file) {
-                $this->files[$file->id] = (object) ['bookId' => $bookId, 'order' => $file->order, 'dateAdded' => $file->dateadded, 'dateModified' => $file->datemodified, 'version' => $file->version, 'name' => $file->name, 'title' => $file->title, 'url' => $file->url, 'size' => $file->size];
+                $this->files[$file->id] = (object)['bookId' => $bookId, 'order' => $file->order, 'dateAdded' => $file->dateadded, 'dateModified' => $file->datemodified, 'version' => $file->version, 'name' => $file->name, 'title' => $file->title, 'url' => $file->url, 'size' => $file->size];
             }
         }
     }

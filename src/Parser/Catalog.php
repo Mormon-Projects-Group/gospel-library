@@ -102,7 +102,7 @@ class Catalog
      */
     public function getFolders(): \stdClass
     {
-        return $this->folders;
+        return (object)$this->folders;
     }
 
     /**
@@ -116,7 +116,7 @@ class Catalog
      */
     public function getBooks(): \stdClass
     {
-        return $this->books;
+        return (object)$this->books;
     }
 
     /**
@@ -130,7 +130,7 @@ class Catalog
      */
     public function getFiles(): \stdClass
     {
-        return $this->files;
+        return (object)$this->files;
     }
 
     /**
