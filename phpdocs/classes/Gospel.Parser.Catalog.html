@@ -144,28 +144,28 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1329999556"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1157556254"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-1329999556" class="accordion-body collapse in">
+            <div id="namespace-1157556254" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1251825201"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-271198766"></a>
                                 <a href="../namespaces/Gospel.html" style="margin-left: 30px; padding-left: 0">Gospel</a>
             </div>
-            <div id="namespace-1251825201" class="accordion-body collapse ">
+            <div id="namespace-271198766" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-755778273"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2120733531"></a>
                                 <a href="../namespaces/Gospel.Parser.html" style="margin-left: 30px; padding-left: 0">Parser</a>
             </div>
-            <div id="namespace-755778273" class="accordion-body collapse ">
+            <div id="namespace-2120733531" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -260,7 +260,7 @@
                                                                     <a href="../classes/Gospel.Parser.Catalog.html#method_parseFiles" class="">parseFiles()</a><br />
                                                             </section>
                             <section class="span4">
-                                                                    <a href="../classes/Gospel.Parser.Catalog.html#property_array" class="">$array</a><br />
+                                                                    <a href="../classes/Gospel.Parser.Catalog.html#property_object" class="">$object</a><br />
                                                                     <a href="../classes/Gospel.Parser.Catalog.html#property_catalogData" class="">$catalogData</a><br />
                                                                     <a href="../classes/Gospel.Parser.Catalog.html#property_folders" class="">$folders</a><br />
                                                                     <a href="../classes/Gospel.Parser.Catalog.html#property_books" class="">$books</a><br />
@@ -308,16 +308,16 @@
 
                                                                     <div class="row-fluid">
         <div class="span8 content class">
-            <a id="property_array" name="property_array" class="anchor"></a>
+            <a id="property_object" name="property_object" class="anchor"></a>
             <article class="property">
-                <h3 class="private ">$array</h3>
-                <pre class="signature">$array : array</pre>
+                <h3 class="private ">$object</h3>
+                <pre class="signature">$object : \stdClass</pre>
                 <p><em></em></p>
                 
 
                                 <h4>Type</h4>
-                array
-                &mdash; JSON data as associative array to parse                            </article>
+                \stdClass
+                &mdash; Object containing JSON data from `catalog.query` API call                            </article>
         </div>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
@@ -335,12 +335,12 @@
             <a id="property_catalogData" name="property_catalogData" class="anchor"></a>
             <article class="property">
                 <h3 class="private ">$catalogData</h3>
-                <pre class="signature">$catalogData : array</pre>
+                <pre class="signature">$catalogData : \stdClass</pre>
                 <p><em></em></p>
                 
 
                                 <h4>Type</h4>
-                array
+                \stdClass
                 &mdash; Catalog data                            </article>
         </div>
         <aside class="span4 detailsbar">
@@ -359,13 +359,13 @@
             <a id="property_folders" name="property_folders" class="anchor"></a>
             <article class="property">
                 <h3 class="private ">$folders</h3>
-                <pre class="signature">$folders : array</pre>
+                <pre class="signature">$folders : \stdClass</pre>
                 <p><em></em></p>
                 
 
                                 <h4>Type</h4>
-                array
-                &mdash; Array of all gospel library folders                            </article>
+                \stdClass
+                &mdash; Gospel library folders                            </article>
         </div>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
@@ -383,13 +383,13 @@
             <a id="property_books" name="property_books" class="anchor"></a>
             <article class="property">
                 <h3 class="private ">$books</h3>
-                <pre class="signature">$books : array</pre>
+                <pre class="signature">$books : \stdClass</pre>
                 <p><em></em></p>
                 
 
                                 <h4>Type</h4>
-                array
-                &mdash; Array of all gospel library books                            </article>
+                \stdClass
+                &mdash; Gospel library books                            </article>
         </div>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
@@ -407,13 +407,13 @@
             <a id="property_files" name="property_files" class="anchor"></a>
             <article class="property">
                 <h3 class="private ">$files</h3>
-                <pre class="signature">$files : array</pre>
+                <pre class="signature">$files : \stdClass</pre>
                 <p><em></em></p>
                 
 
                                 <h4>Type</h4>
-                array
-                &mdash; Array of all gospel library files                            </article>
+                \stdClass
+                &mdash; Gospel library files                            </article>
         </div>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
@@ -439,16 +439,16 @@
             <article class="method">
                 <h3 class="public ">__construct()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">__construct(array  <span class="argument">$array</span>) </pre>
+                <pre class="signature" style="margin-right: 54px;">__construct(\stdClass  <span class="argument">$object</span>) </pre>
                 <p><em>Construct Client class</em></p>
                 
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
                                                     <tr>
-                                <td>array</td>
-                                <td>$array </td>
-                                <td><p>Array to parse</p></td>
+                                <td>\stdClass</td>
+                                <td>$object </td>
+                                <td><p>Object to parse</p></td>
                             </tr>
                                             </table>
                 
@@ -565,15 +565,15 @@
             <article class="method">
                 <h3 class="public ">getFolders()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getFolders() : array</pre>
+                <pre class="signature" style="margin-right: 54px;">getFolders() : \stdClass</pre>
                 <p><em>Get all folders in an adjacency list model for hierarchical data</em></p>
                 
 
                 
                 
                                     <h4>Returns</h4>
-                    array
-                                            &mdash; <p>Flattened array of folder data in an adjacency list model for hierarchical data</p>
+                    \stdClass
+                                            &mdash; <p>Object containing folder data in an adjacency list model for hierarchical data</p>
                                     				
                             </article>
         </div>
@@ -596,15 +596,15 @@
             <article class="method">
                 <h3 class="public ">getBooks()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getBooks() : array</pre>
+                <pre class="signature" style="margin-right: 54px;">getBooks() : \stdClass</pre>
                 <p><em>Get all books in an adjacency list model for hierarchical data</em></p>
                 
 
                 
                 
                                     <h4>Returns</h4>
-                    array
-                                            &mdash; <p>Flattened array of books data in an adjacency list model for hierarchical data</p>
+                    \stdClass
+                                            &mdash; <p>Object containing books data in an adjacency list model for hierarchical data</p>
                                     				
                             </article>
         </div>
@@ -627,15 +627,15 @@
             <article class="method">
                 <h3 class="public ">getFiles()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getFiles() : array</pre>
+                <pre class="signature" style="margin-right: 54px;">getFiles() : \stdClass</pre>
                 <p><em>Get all files in an adjacency list model for hierarchical data</em></p>
                 
 
                 
                 
                                     <h4>Returns</h4>
-                    array
-                                            &mdash; <p>Flattened array of files data in an adjacency list model for hierarchical data</p>
+                    \stdClass
+                                            &mdash; <p>Object containing files data in an adjacency list model for hierarchical data</p>
                                     				
                             </article>
         </div>
@@ -658,16 +658,16 @@
             <article class="method">
                 <h3 class="private ">parseData()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">parseData(array  <span class="argument">$array = null</span>, integer  <span class="argument">$parentFolderId = null</span>) </pre>
-                <p><em>Loop through the array and parse the data</em></p>
+                <pre class="signature" style="margin-right: 54px;">parseData(\stdClass  <span class="argument">$object = null</span>, integer  <span class="argument">$parentFolderId = null</span>) </pre>
+                <p><em>Loop through the JSON object and parse the data</em></p>
                 
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
                                                     <tr>
-                                <td>array</td>
-                                <td>$array </td>
-                                <td><p>Array of data from the <code>catalogQuery</code> API call. Default: <code>null</code></p></td>
+                                <td>\stdClass</td>
+                                <td>$object </td>
+                                <td><p>Object containing data from the <code>catalogQuery</code> API call. Default: <code>null</code></p></td>
                             </tr>
                                                     <tr>
                                 <td>integer</td>
@@ -697,16 +697,16 @@
             <article class="method">
                 <h3 class="private ">parseBooks()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">parseBooks(array  <span class="argument">$books = null</span>, integer  <span class="argument">$folderId</span>) </pre>
+                <pre class="signature" style="margin-right: 54px;">parseBooks(\stdClass  <span class="argument">$books = null</span>, integer  <span class="argument">$folderId</span>) </pre>
                 <p><em>Loop through the array and parse the books data</em></p>
                 
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
                                                     <tr>
-                                <td>array</td>
+                                <td>\stdClass</td>
                                 <td>$books </td>
-                                <td><p>Array of books data. Default: <code>null</code></p></td>
+                                <td><p>Object containing books data. Default: <code>null</code></p></td>
                             </tr>
                                                     <tr>
                                 <td>integer</td>
@@ -736,16 +736,16 @@
             <article class="method">
                 <h3 class="private ">parseFiles()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">parseFiles(array  <span class="argument">$files = null</span>, integer  <span class="argument">$bookId</span>) </pre>
+                <pre class="signature" style="margin-right: 54px;">parseFiles(\stdClass  <span class="argument">$files = null</span>, integer  <span class="argument">$bookId</span>) </pre>
                 <p><em>Loop through the array and parse the files data</em></p>
                 
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
                                                     <tr>
-                                <td>array</td>
+                                <td>\stdClass</td>
                                 <td>$files </td>
-                                <td><p>Array of files data. Default: <code>null</code></p></td>
+                                <td><p>Object containing files data. Default: <code>null</code></p></td>
                             </tr>
                                                     <tr>
                                 <td>integer</td>
@@ -819,7 +819,7 @@
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on January 2nd, 2018 at 23:47.
+                    on January 3rd, 2018 at 22:05.
                 </section>
             </section>
         </section>

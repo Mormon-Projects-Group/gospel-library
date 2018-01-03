@@ -43,9 +43,9 @@ class Client
      *
      * @param null
      *
-     * @return array Array of languages for which there is content in the Gospel Library
+     * @return \stdClass Object containing languages for which there is content in the Gospel Library
      */
-    public function languagesQuery(): array
+    public function languagesQuery(): \stdClass
     {
         return $this->getApiArray('languages.query');
     }
@@ -55,9 +55,9 @@ class Client
      *
      * @param null
      *
-     * @return array Array of platforms for which there is content in the Gospel Library
+     * @return \stdClass Object containing platforms for which there is content in the Gospel Library
      */
-    public function platformsQuery(): array
+    public function platformsQuery(): \stdClass
     {
         return $this->getApiArray('platforms.query');
     }
@@ -68,9 +68,9 @@ class Client
      * @param int $languageid ID of language to get catalog content in. Available languages: use `languagesQuery()`
      * @param int $platformid ID of platform to get catalog content from. Available platforms: use `platformsQuery()`
      *
-     * @return array Array of metadata about requested Gospel Library catalog
+     * @return \stdClass Object containing metadata about requested Gospel Library catalog
      */
-    public function catalogQuery(int $languageid, int $platformid): array
+    public function catalogQuery(int $languageid, int $platformid): \stdClass
     {
         return $this->getApiArray('catalog.query', ['languageid' => $languageid, 'platformid' => $platformid]);
     }
@@ -81,9 +81,9 @@ class Client
      * @param int $languageid ID of language to get catalog content in. Available languages: use `languagesQuery()`
      * @param int $platformid ID of platform to get catalog content from. Available platforms: use `platformsQuery()`
      *
-     * @return array Array of metadata about requested Gospel Library catalog, including the last modified date
+     * @return \stdClass Object containing metadata about requested Gospel Library catalog, including the last modified date
      */
-    public function catalogQueryModified(int $languageid, int $platformid): array
+    public function catalogQueryModified(int $languageid, int $platformid): \stdClass
     {
         return $this->getApiArray('catalog.query.modified', ['languageid' => $languageid, 'platformid' => $platformid]);
     }
@@ -95,9 +95,9 @@ class Client
      * @param int    $platformid ID of platform to get catalog content from. Available platforms: use `platformsQuery()`
      * @param string $lastdate   List content updated since `$lastdate`
      *
-     * @return array Array of showing all material IDs updated since `$lastdate`
+     * @return \stdClass Object with all material IDs updated since `$lastdate`
      */
-    public function bookVersions(int $languageid, int $platformid, string $lastdate): array
+    public function bookVersions(int $languageid, int $platformid, string $lastdate): \stdClass
     {
         $lastdate = date('Y-m-d', strtotime($lastdate));
 
@@ -115,7 +115,7 @@ class Client
      */
     public function getUrl(string $url, array $args = []): string
     {
-        return (string)$this->client
+        return (string) $this->client
             ->request('GET', $url, ['query' => $args])
             ->getBody();
     }
@@ -126,14 +126,14 @@ class Client
      * @param string $action API call to make
      * @param array  $args   Associative array of arguments to pass as HTTP GET query parameters. Default: `null`
      *
-     * @return array Associative array of the API call results
+     * @return \stdClass Object containing the API call results
      */
-    private function getApiArray(string $action, array $args = []): array
+    private function getApiArray(string $action, array $args = []): \stdClass
     {
         $args = array_merge(['action' => $action], $args, ['format' => 'json']);
         $json = $this->getUrl(Config::get('base'), $args);
 
-        return json_decode($json, true);
+        return json_decode($json);
     }
 }
 

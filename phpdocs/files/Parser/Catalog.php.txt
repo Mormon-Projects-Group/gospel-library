@@ -19,30 +19,30 @@ use Gospel\GospelException;
  */
 class Catalog
 {
-    /** @var array JSON data as associative array to parse */
-    private $array;
+    /** @var \stdClass Object containing JSON data from `catalog.query` API call */
+    private $object;
 
-    /** @var array Catalog data */
+    /** @var \stdClass Catalog data */
     private $catalogData;
 
-    /** @var array Array of all gospel library folders */
+    /** @var \stdClass Gospel library folders */
     private $folders;
 
-    /** @var array Array of all gospel library books */
+    /** @var \stdClass Gospel library books */
     private $books;
 
-    /** @var array Array of all gospel library files */
+    /** @var \stdClass Gospel library files */
     private $files;
 
     /**
      * Construct Client class
      *
-     * @param array $array Array to parse
+     * @param \stdClass $object Object to parse
      */
-    public function __construct(array $array)
+    public function __construct(\stdClass $object)
     {
-        $this->array = $array;
-        $this->catalogData = $this->array['catalog']['folders'];
+        $this->object = $object;
+        $this->catalogData = $object->catalog->folders;
         $this->parseData();
     }
 
@@ -55,7 +55,7 @@ class Catalog
      */
     public function getSuccessStatus(): bool
     {
-        return $this->array['success'];
+        return $this->object->success;
     }
 
     /**
@@ -69,10 +69,10 @@ class Catalog
      */
     public function getModifiedDate(): \DateTime
     {
-        $date = $this->array['catalog']['date_changed'];
+        $date = $this->object->catalog->date_changed;
         $dateObject = \DateTime::createFromFormat('Y-m-d H:i:s', $date);
         $errors = \DateTime::getLastErrors();
-        if (empty($errors['warning_count']) && is_a($dateObject, '\DateTime')) {
+        if (empty($errors['warning_count']) && is_a($dateObject, '\DateTime', false)) {
             return $dateObject;
         } else {
             throw new GospelException('Invalid date used for `getModifiedDate` in class `'.__CLASS__.'``: '.$date);
@@ -88,7 +88,7 @@ class Catalog
      */
     public function getCatalogName(): string
     {
-        return $this->array['catalog']['name'];
+        return $this->object->catalog->name;
     }
 
     /**
@@ -98,9 +98,9 @@ class Catalog
      *
      * @param null
      *
-     * @return array Flattened array of folder data in an adjacency list model for hierarchical data
+     * @return \stdClass Object containing folder data in an adjacency list model for hierarchical data
      */
-    public function getFolders(): array
+    public function getFolders(): \stdClass
     {
         return $this->folders;
     }
@@ -112,9 +112,9 @@ class Catalog
      *
      * @param null
      *
-     * @return array Flattened array of books data in an adjacency list model for hierarchical data
+     * @return \stdClass Object containing books data in an adjacency list model for hierarchical data
      */
-    public function getBooks(): array
+    public function getBooks(): \stdClass
     {
         return $this->books;
     }
@@ -126,27 +126,27 @@ class Catalog
      *
      * @param null
      *
-     * @return array Flattened array of files data in an adjacency list model for hierarchical data
+     * @return \stdClass Object containing files data in an adjacency list model for hierarchical data
      */
-    public function getFiles(): array
+    public function getFiles(): \stdClass
     {
         return $this->files;
     }
 
     /**
-     * Loop through the array and parse the data
+     * Loop through the JSON object and parse the data
      *
-     * @param array $array Array of data from the `catalogQuery` API call. Default: `null`
-     * @param int $parentFolderId ID for the parent folder. Default: `null`
+     * @param \stdClass $object         Object containing data from the `catalogQuery` API call. Default: `null`
+     * @param int       $parentFolderId ID for the parent folder. Default: `null`
      */
-    private function parseData(array $array = null, int $parentFolderId = null): void
+    private function parseData(\stdClass $object = null, int $parentFolderId = null): void
     {
-        $array = empty($array) ? $this->catalogData : $array;
-        foreach ($array as $folder) {
-            $this->folders[$folder['id']] = ['parentFolderId' => $parentFolderId, 'languageId' => @$folder['landguageid'], 'name' => $folder['name'], 'displayOrder' => $folder['display_order'], 'englishName' => $folder['eng_name']];
-            $this->parseBooks($folder['books'], $folder['id']);
-            if (!empty($folder['folders'])) {
-                $this->parseData($folder['folders'], $folder['id']);
+        $object = empty($object) ? $this->catalogData : $object;
+        foreach ($object as $folder) {
+            $this->folders[$folder->id] = (object) ['parentFolderId' => $parentFolderId, 'languageId' => @$folder->landguageid, 'name' => $folder->name, 'displayOrder' => $folder->display_order, 'englishName' => $folder->eng_name];
+            $this->parseBooks((object) $folder->books, $folder->id);
+            if (!empty($folder->folders)) {
+                $this->parseData((object) $folder->folders, $folder->id);
             }
         }
     }
@@ -154,15 +154,15 @@ class Catalog
     /**
      * Loop through the array and parse the books data
      *
-     * @param array $books Array of books data. Default: `null`
-     * @param int $folderId ID for the folder that contains the book. Default: `null`
+     * @param \stdClass $books    Object containing books data. Default: `null`
+     * @param int       $folderId ID for the folder that contains the book. Default: `null`
      */
-    private function parseBooks(array $books = null, int $folderId): void
+    private function parseBooks(\stdClass $books = null, int $folderId): void
     {
         if (!empty($books)) {
             foreach ($books as $book) {
-                $this->books[$book['id']] = ['folderId' => $folderId, 'name' => $book['name'], 'fullName' => $book['full_name'], 'description' => $book['description'], 'gospelLibraryUri' => $book['gl_uri'], 'url' => $book['url'], 'displayOrder' => $book['display_order'], 'version' => $book['version'], 'fileVersion' => $book['file_version'], 'file' => $book['file'], 'dateAdded' => $book['dateadded'], 'dateModified' => $book['datemodified'], 'cbId' => $book['cb_id'], 'mediaAvailable' => $book['media_available'], 'obsolete' => $book['obsolete'], 'size' => $book['size'], 'sizeIndex' => $book['size_index']];
-                $this->parseFiles(@$book['files'], $book['id']);
+                $this->books[$book->id] = (object) ['folderId' => $folderId, 'name' => $book->name, 'fullName' => $book->full_name, 'description' => $book->description, 'gospelLibraryUri' => $book->gl_uri, 'url' => $book->url, 'displayOrder' => $book->display_order, 'version' => $book->version, 'fileVersion' => $book->file_version, 'file' => $book->file, 'dateAdded' => $book->dateadded, 'dateModified' => $book->datemodified, 'cbId' => $book->cb_id, 'mediaAvailable' => $book->media_available, 'obsolete' => $book->obsolete, 'size' => $book->size, 'sizeIndex' => $book->size_index];
+                $this->parseFiles(@$book->files, $book->id);
             }
         }
     }
@@ -170,14 +170,15 @@ class Catalog
     /**
      * Loop through the array and parse the files data
      *
-     * @param array $files Array of files data. Default: `null`
-     * @param int $bookId ID for the book associated with the file. Default: `null`
+     * @param \stdClass $files  Object containing files data. Default: `null`
+     * @param int       $bookId ID for the book associated with the file. Default: `null`
      */
-    private function parseFiles(array $files = null, int $bookId): void
+    private function parseFiles(\stdClass $files = null, int $bookId): void
     {
         if (!empty($files)) {
-            foreach ($files['PDF'] as $file) {
-                $this->files[$file['id']] = ['bookId' => $bookId, 'order' => $file['order'], 'dateAdded' => $file['dateadded'], 'dateModified' => $file['datemodified'], 'version' => $file['version'], 'name' => $file['name'], 'title' => $file['title'], 'url' => $file['url'], 'size' => $file['size']];
+            // Currently, Gospel Library only includes PDF files
+            foreach ($files->PDF as $file) {
+                $this->files[$file->id] = (object) ['bookId' => $bookId, 'order' => $file->order, 'dateAdded' => $file->dateadded, 'dateModified' => $file->datemodified, 'version' => $file->version, 'name' => $file->name, 'title' => $file->title, 'url' => $file->url, 'size' => $file->size];
             }
         }
     }

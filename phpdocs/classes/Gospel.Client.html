@@ -144,28 +144,28 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1894297539"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1404865630"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-1894297539" class="accordion-body collapse in">
+            <div id="namespace-1404865630" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-18416761"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1887282597"></a>
                                 <a href="../namespaces/Gospel.html" style="margin-left: 30px; padding-left: 0">Gospel</a>
             </div>
-            <div id="namespace-18416761" class="accordion-body collapse ">
+            <div id="namespace-1887282597" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1121366597"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-816297180"></a>
                                 <a href="../namespaces/Gospel.Parser.html" style="margin-left: 30px; padding-left: 0">Parser</a>
             </div>
-            <div id="namespace-1121366597" class="accordion-body collapse ">
+            <div id="namespace-816297180" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -363,15 +363,15 @@
             <article class="method">
                 <h3 class="public ">languagesQuery()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">languagesQuery() : array</pre>
+                <pre class="signature" style="margin-right: 54px;">languagesQuery() : \stdClass</pre>
                 <p><em>Languages query</em></p>
                 
 
                 
                 
                                     <h4>Returns</h4>
-                    array
-                                            &mdash; <p>Array of languages for which there is content in the Gospel Library</p>
+                    \stdClass
+                                            &mdash; <p>Object containing languages for which there is content in the Gospel Library</p>
                                     				
                             </article>
         </div>
@@ -392,15 +392,15 @@
             <article class="method">
                 <h3 class="public ">platformsQuery()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">platformsQuery() : array</pre>
+                <pre class="signature" style="margin-right: 54px;">platformsQuery() : \stdClass</pre>
                 <p><em>Platforms query</em></p>
                 
 
                 
                 
                                     <h4>Returns</h4>
-                    array
-                                            &mdash; <p>Array of platforms for which there is content in the Gospel Library</p>
+                    \stdClass
+                                            &mdash; <p>Object containing platforms for which there is content in the Gospel Library</p>
                                     				
                             </article>
         </div>
@@ -421,7 +421,7 @@
             <article class="method">
                 <h3 class="public ">catalogQuery()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">catalogQuery(integer  <span class="argument">$languageid</span>, integer  <span class="argument">$platformid</span>) : array</pre>
+                <pre class="signature" style="margin-right: 54px;">catalogQuery(integer  <span class="argument">$languageid</span>, integer  <span class="argument">$platformid</span>) : \stdClass</pre>
                 <p><em>Catalog query</em></p>
                 
 
@@ -441,8 +441,8 @@
                 
                 
                                     <h4>Returns</h4>
-                    array
-                                            &mdash; <p>Array of metadata about requested Gospel Library catalog</p>
+                    \stdClass
+                                            &mdash; <p>Object containing metadata about requested Gospel Library catalog</p>
                                     				
                             </article>
         </div>
@@ -463,7 +463,7 @@
             <article class="method">
                 <h3 class="public ">catalogQueryModified()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">catalogQueryModified(integer  <span class="argument">$languageid</span>, integer  <span class="argument">$platformid</span>) : array</pre>
+                <pre class="signature" style="margin-right: 54px;">catalogQueryModified(integer  <span class="argument">$languageid</span>, integer  <span class="argument">$platformid</span>) : \stdClass</pre>
                 <p><em>Catalog query modified</em></p>
                 
 
@@ -483,8 +483,8 @@
                 
                 
                                     <h4>Returns</h4>
-                    array
-                                            &mdash; <p>Array of metadata about requested Gospel Library catalog, including the last modified date</p>
+                    \stdClass
+                                            &mdash; <p>Object containing metadata about requested Gospel Library catalog, including the last modified date</p>
                                     				
                             </article>
         </div>
@@ -505,7 +505,7 @@
             <article class="method">
                 <h3 class="public ">bookVersions()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">bookVersions(integer  <span class="argument">$languageid</span>, integer  <span class="argument">$platformid</span>, string  <span class="argument">$lastdate</span>) : array</pre>
+                <pre class="signature" style="margin-right: 54px;">bookVersions(integer  <span class="argument">$languageid</span>, integer  <span class="argument">$platformid</span>, string  <span class="argument">$lastdate</span>) : \stdClass</pre>
                 <p><em>Book versions</em></p>
                 
 
@@ -530,8 +530,8 @@
                 
                 
                                     <h4>Returns</h4>
-                    array
-                                            &mdash; <p>Array of showing all material IDs updated since <code>$lastdate</code></p>
+                    \stdClass
+                                            &mdash; <p>Object with all material IDs updated since <code>$lastdate</code></p>
                                     				
                             </article>
         </div>
@@ -594,7 +594,7 @@
             <article class="method">
                 <h3 class="private ">getApiArray()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getApiArray(string  <span class="argument">$action</span>, array  <span class="argument">$args = array()</span>) : array</pre>
+                <pre class="signature" style="margin-right: 54px;">getApiArray(string  <span class="argument">$action</span>, array  <span class="argument">$args = array()</span>) : \stdClass</pre>
                 <p><em>Get array from returned API JSON</em></p>
                 
 
@@ -614,8 +614,8 @@
                 
                 
                                     <h4>Returns</h4>
-                    array
-                                            &mdash; <p>Associative array of the API call results</p>
+                    \stdClass
+                                            &mdash; <p>Object containing the API call results</p>
                                     				
                             </article>
         </div>
@@ -680,7 +680,7 @@
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on January 2nd, 2018 at 23:47.
+                    on January 3rd, 2018 at 22:05.
                 </section>
             </section>
         </section>

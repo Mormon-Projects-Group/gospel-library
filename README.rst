@@ -42,50 +42,50 @@ Result:
 .. code-block:: php
 
     <?php
-        array (size=5)
-          'languages' =>
+        object(stdClass)[129]
+          public 'languages' =>
             array (size=107)
               0 =>
-                array (size=7)
-                  'id' => int 204
-                  'name' => string 'Afrikaans' (length=9)
-                  'eng_name' => string 'Afrikaans' (length=9)
-                  'code' => string 'afr' (length=3)
-                  'code_three' => string 'afr' (length=3)
-                  'lds_xml_code' => string '501' (length=3)
-                  'android_sdk_version' => string '8' (length=1)
+                object(stdClass)[36]
+                  public 'id' => int 204
+                  public 'name' => string 'Afrikaans' (length=9)
+                  public 'eng_name' => string 'Afrikaans' (length=9)
+                  public 'code' => string 'afr' (length=3)
+                  public 'code_three' => string 'afr' (length=3)
+                  public 'lds_xml_code' => string '501' (length=3)
+                  public 'android_sdk_version' => string '8' (length=1)
               1 =>
-                array (size=7)
-                  'id' => int 25
-                  'name' => string 'Shqip' (length=5)
-                  'eng_name' => string 'Albanian' (length=8)
-                  'code' => string 'sq' (length=2)
-                  'code_three' => string 'sqi' (length=3)
-                  'lds_xml_code' => string '101' (length=3)
-                  'android_sdk_version' => string '8' (length=1)
+                object(stdClass)[38]
+                  public 'id' => int 25
+                  public 'name' => string 'Shqip' (length=5)
+                  public 'eng_name' => string 'Albanian' (length=8)
+                  public 'code' => string 'sq' (length=2)
+                  public 'code_three' => string 'sqi' (length=3)
+                  public 'lds_xml_code' => string '101' (length=3)
+                  public 'android_sdk_version' => string '8' (length=1)
               2 =>
-                array (size=7)
-                  'id' => int 63
-                  'name' => string '\u12a0\u121b\u122d\u129b' (length=12)
-                  'eng_name' => string 'Amharic' (length=7)
-                  'code' => string 'am' (length=2)
-                  'code_three' => string 'amh' (length=3)
-                  'lds_xml_code' => string '506' (length=3)
-                  'android_sdk_version' => string '14' (length=2)
+                object(stdClass)[33]
+                  public 'id' => int 63
+                  public 'name' => string '\u12a0\u121b\u122d\u129b' (length=12)
+                  public 'eng_name' => string 'Amharic' (length=7)
+                  public 'code' => string 'am' (length=2)
+                  public 'code_three' => string 'amh' (length=3)
+                  public 'lds_xml_code' => string '506' (length=3)
+                  public 'android_sdk_version' => string '14' (length=2)
               3 =>
-                array (size=7)
-                  'id' => int 64
-                  'name' => string 'Apache' (length=6)
-                  'eng_name' => string 'Apache' (length=6)
-                  'code' => string 'ap' (length=2)
-                  'code_three' => string 'apw' (length=3)
-                  'lds_xml_code' => string '012' (length=3)
-                  'android_sdk_version' => string '10' (length=2)
+                object(stdClass)[39]
+                  public 'id' => int 64
+                  public 'name' => string 'Apache' (length=6)
+                  public 'eng_name' => string 'Apache' (length=6)
+                  public 'code' => string 'ap' (length=2)
+                  public 'code_three' => string 'apw' (length=3)
+                  public 'lds_xml_code' => string '012' (length=3)
+                  public 'android_sdk_version' => string '10' (length=2)
               …etc.
-          'count' => int 107
-          'success' => boolean true
-          'date_changed' => string '2018-01-02 14:36:18' (length=19)
-          'platformid' => null
+          public 'count' => int 107
+          public 'success' => boolean true
+          public 'date_changed' => string '2018-01-03 05:00:00' (length=19)
+          public 'platformid' => null
     ?>
 
 Platforms
@@ -105,107 +105,107 @@ Result:
 .. code-block:: php
 
     <?php
-        array (size=3)
-          'platforms' =>
+        object(stdClass)[28]
+          public 'platforms' =>
             array (size=16)
               0 =>
-                array (size=4)
-                  'id' => int 4
-                  'name' => string 'Android' (length=7)
-                  'extension' => string 'db' (length=2)
-                  'catalog_version' => string '1000' (length=4)
+                object(stdClass)[36]
+                  public 'id' => int 4
+                  public 'name' => string 'Android' (length=7)
+                  public 'extension' => string 'db' (length=2)
+                  public 'catalog_version' => string '1000' (length=4)
               1 =>
-                array (size=4)
-                  'id' => int 17
-                  'name' => string 'AndroidGospelLibrary' (length=20)
-                  'extension' => string 'zbook' (length=5)
-                  'catalog_version' => string '1002' (length=4)
+                object(stdClass)[38]
+                  public 'id' => int 17
+                  public 'name' => string 'AndroidGospelLibrary' (length=20)
+                  public 'extension' => string 'zbook' (length=5)
+                  public 'catalog_version' => string '1002' (length=4)
               2 =>
-                array (size=4)
-                  'id' => int 14
-                  'name' => string 'AndroidGospelStudy' (length=18)
-                  'extension' => string 'zbook' (length=5)
-                  'catalog_version' => string '1001' (length=4)
+                object(stdClass)[33]
+                  public 'id' => int 14
+                  public 'name' => string 'AndroidGospelStudy' (length=18)
+                  public 'extension' => string 'zbook' (length=5)
+                  public 'catalog_version' => string '1001' (length=4)
               3 =>
-                array (size=4)
-                  'id' => int 3
-                  'name' => string 'Blackberry Apps' (length=15)
-                  'extension' => string 'jad' (length=3)
-                  'catalog_version' => string '1000' (length=4)
+                object(stdClass)[39]
+                  public 'id' => int 3
+                  public 'name' => string 'Blackberry Apps' (length=15)
+                  public 'extension' => string 'jad' (length=3)
+                  public 'catalog_version' => string '1000' (length=4)
               4 =>
-                array (size=4)
-                  'id' => int 9
-                  'name' => string 'Blackberry Minimized Content' (length=28)
-                  'extension' => string 'gz' (length=2)
-                  'catalog_version' => string '1000' (length=4)
+                object(stdClass)[31]
+                  public 'id' => int 9
+                  public 'name' => string 'Blackberry Minimized Content' (length=28)
+                  public 'extension' => string 'gz' (length=2)
+                  public 'catalog_version' => string '1000' (length=4)
               5 =>
-                array (size=4)
-                  'id' => int 2
-                  'name' => string 'ePub' (length=4)
-                  'extension' => string 'epub' (length=4)
-                  'catalog_version' => string '1000' (length=4)
+                object(stdClass)[32]
+                  public 'id' => int 2
+                  public 'name' => string 'ePub' (length=4)
+                  public 'extension' => string 'epub' (length=4)
+                  public 'catalog_version' => string '1000' (length=4)
               6 =>
-                array (size=4)
-                  'id' => int 1
-                  'name' => string 'iPhone' (length=6)
-                  'extension' => string 'zbook' (length=5)
-                  'catalog_version' => string '1000' (length=4)
+                object(stdClass)[27]
+                  public 'id' => int 1
+                  public 'name' => string 'iPhone' (length=6)
+                  public 'extension' => string 'zbook' (length=5)
+                  public 'catalog_version' => string '1000' (length=4)
               7 =>
-                array (size=4)
-                  'id' => int 6
-                  'name' => string 'Kindle' (length=6)
-                  'extension' => string 'zip' (length=3)
-                  'catalog_version' => string '1000' (length=4)
+                object(stdClass)[21]
+                  public 'id' => int 6
+                  public 'name' => string 'Kindle' (length=6)
+                  public 'extension' => string 'zip' (length=3)
+                  public 'catalog_version' => string '1000' (length=4)
               8 =>
-                array (size=4)
-                  'id' => int 16
-                  'name' => string 'ScirpturesTestIOSUPdate' (length=23)
-                  'extension' => string 'zbook' (length=5)
-                  'catalog_version' => string '1000' (length=4)
+                object(stdClass)[20]
+                  public 'id' => int 16
+                  public 'name' => string 'ScirpturesTestIOSUPdate' (length=23)
+                  public 'extension' => string 'zbook' (length=5)
+                  public 'catalog_version' => string '1000' (length=4)
               9 =>
-                array (size=4)
-                  'id' => int 11
-                  'name' => string 'ScriptureTestAndroid' (length=20)
-                  'extension' => string 'zbook' (length=5)
-                  'catalog_version' => string '1000' (length=4)
+                object(stdClass)[18]
+                  public 'id' => int 11
+                  public 'name' => string 'ScriptureTestAndroid' (length=20)
+                  public 'extension' => string 'zbook' (length=5)
+                  public 'catalog_version' => string '1000' (length=4)
               10 =>
-                array (size=4)
-                  'id' => int 15
-                  'name' => string 'ScriptureTestBlackBerry' (length=23)
-                  'extension' => string 'gz' (length=2)
-                  'catalog_version' => string '1000' (length=4)
+                object(stdClass)[40]
+                  public 'id' => int 15
+                  public 'name' => string 'ScriptureTestBlackBerry' (length=23)
+                  public 'extension' => string 'gz' (length=2)
+                  public 'catalog_version' => string '1000' (length=4)
               11 =>
-                array (size=4)
-                  'id' => int 12
-                  'name' => string 'ScriptureTestIOS' (length=16)
-                  'extension' => string 'zbook' (length=5)
-                  'catalog_version' => string '1000' (length=4)
+                object(stdClass)[35]
+                  public 'id' => int 12
+                  public 'name' => string 'ScriptureTestIOS' (length=16)
+                  public 'extension' => string 'zbook' (length=5)
+                  public 'catalog_version' => string '1000' (length=4)
               12 =>
-                array (size=4)
-                  'id' => int 10
-                  'name' => string 'WebOS' (length=5)
-                  'extension' => string 'json' (length=4)
-                  'catalog_version' => string '1000' (length=4)
+                object(stdClass)[16]
+                  public 'id' => int 10
+                  public 'name' => string 'WebOS' (length=5)
+                  public 'extension' => string 'json' (length=4)
+                  public 'catalog_version' => string '1000' (length=4)
               13 =>
-                array (size=4)
-                  'id' => int 7
-                  'name' => string 'Windows Mobile 6.x Applications' (length=31)
-                  'extension' => string 'cab' (length=3)
-                  'catalog_version' => string '1000' (length=4)
+                object(stdClass)[34]
+                  public 'id' => int 7
+                  public 'name' => string 'Windows Mobile 6.x Applications' (length=31)
+                  public 'extension' => string 'cab' (length=3)
+                  public 'catalog_version' => string '1000' (length=4)
               14 =>
-                array (size=4)
-                  'id' => int 5
-                  'name' => string 'Windows Mobile 7' (length=16)
-                  'extension' => string 'zip' (length=3)
-                  'catalog_version' => string '1000' (length=4)
+                object(stdClass)[17]
+                  public 'id' => int 5
+                  public 'name' => string 'Windows Mobile 7' (length=16)
+                  public 'extension' => string 'zip' (length=3)
+                  public 'catalog_version' => string '1000' (length=4)
               15 =>
-                array (size=4)
-                  'id' => int 8
-                  'name' => string 'Windows Phone' (length=13)
-                  'extension' => string 'zip' (length=3)
-                  'catalog_version' => string '1000' (length=4)
-          'count' => int 16
-          'success' => boolean true
+                object(stdClass)[25]
+                  public 'id' => int 8
+                  public 'name' => string 'Windows Phone' (length=13)
+                  public 'extension' => string 'zip' (length=3)
+                  public 'catalog_version' => string '1000' (length=4)
+          public 'count' => int 16
+          public 'success' => boolean true
     ?>
 
 Catalog
@@ -226,13 +226,13 @@ Result:
 .. code-block:: php
 
     <?php
-        Array
+        stdClass Object
         (
-            [catalog] => Array
+            [catalog] => stdClass Object
                 (
                     [folders] => Array
                         (
-                            [0] => Array
+                            [0] => stdClass Object
                                 (
                                     [display_order] => 0
                                     [name] => Scriptures
@@ -243,7 +243,7 @@ Result:
                                     [download_all] =>
                                     [folders] => Array
                                         (
-                                            [0] => Array
+                                            [0] => stdClass Object
                                                 (
                                                     [display_order] => 0
                                                     [name] => Study Helps
@@ -259,7 +259,7 @@ Result:
 
                                                     [books] => Array
                                                         (
-                                                            [0] => Array
+                                                            [0] => stdClass Object
                                                                 (
                                                                     [name] => Topical Guide
                                                                     [full_name] => Topical Guide
@@ -280,7 +280,7 @@ Result:
                                                                     [size_index] => 2969366
                                                                 )
 
-                                                            [1] => Array
+                                                            [1] => stdClass Object
                                                                 (
                                                                     [name] => Bible Dictionary
                                                                     [full_name] => Bible Dictionary
@@ -300,7 +300,19 @@ Result:
                                                                     [size] => 552203
                                                                     [size_index] => 765119
                                                                 )
-    …etc.
+                                                        )
+                                                )
+                                        )
+                                )
+                        )
+                    …etc
+                    [name] => All English content
+                    [date_changed] => 2016-09-06 15:09:08
+                    [display_order] => 0
+                )
+
+            [success] => 1
+        )
     ?>
 
 Catalog Modified
@@ -321,10 +333,10 @@ Result:
 .. code-block:: php
 
     <?php
-        array (size=3)
-          'version' => string '159' (length=3)
-          'catalog_modified' => string '2016-09-06 15:09:08' (length=19)
-          'success' => boolean true
+        object(stdClass)[36]
+          public 'version' => string '159' (length=3)
+          public 'catalog_modified' => string '2016-09-06 15:09:08' (length=19)
+          public 'success' => boolean true
     ?>
 
 Book Versions
@@ -345,42 +357,42 @@ Result:
 .. code-block:: php
 
     <?php
-        array (size=1)
-          'books' =>
+        object(stdClass)[20]
+          public 'books' =>
             array (size=8)
               0 =>
-                array (size=2)
-                  'id' => int 76447
-                  'version' => int 1
+                object(stdClass)[36]
+                  public 'id' => int 76447
+                  public 'version' => int 1
               1 =>
-                array (size=2)
-                  'id' => int 76448
-                  'version' => int 1
+                object(stdClass)[38]
+                  public 'id' => int 76448
+                  public 'version' => int 1
               2 =>
-                array (size=2)
-                  'id' => int 76449
-                  'version' => int 1
+                object(stdClass)[33]
+                  public 'id' => int 76449
+                  public 'version' => int 1
               3 =>
-                array (size=2)
-                  'id' => int 76450
-                  'version' => int 1
+                object(stdClass)[39]
+                  public 'id' => int 76450
+                  public 'version' => int 1
               4 =>
-                array (size=2)
-                  'id' => int 76451
-                  'version' => int 1
+                object(stdClass)[31]
+                  public 'id' => int 76451
+                  public 'version' => int 1
               5 =>
-                array (size=2)
-                  'id' => int 76452
-                  'version' => int 1
+                object(stdClass)[32]
+                  public 'id' => int 76452
+                  public 'version' => int 1
               6 =>
-                array (size=2)
-                  'id' => int 76453
-                  'version' => int 1
+                object(stdClass)[27]
+                  public 'id' => int 76453
+                  public 'version' => int 1
               7 =>
-                array (size=2)
-                  'id' => int 76454
-                  'version' => int 1
-            ?>
+                object(stdClass)[21]
+                  public 'id' => int 76454
+                  public 'version' => int 1
+    ?>
 
 =======
 Parsers
