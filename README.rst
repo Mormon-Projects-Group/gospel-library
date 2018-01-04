@@ -7,6 +7,8 @@ LDS Gospel Library
 
 This small PHP library allows easy access to the `Gospel Library Web Services <https://tech.lds.org/wiki/Gospel_Library_Catalog_Web_Service>`_. These services only provide API access to the content of the library and not any of the features (like searching, highlighting, notes, tags, and bookmarks).
 
+The web services only provide metadata about content in the Gospel Library. This project provides access to the metadata but **not to any actual content**. Intellectual Reserve, Inc. owns the copyright for all materials found in the Gospel Library.
+
 =====================
 Gospel Library Client
 =====================
@@ -37,7 +39,7 @@ List of languages for which the library exists.
         var_dump($results);
     ?>
 
-Result:
+Example return:
 
 .. code-block:: php
 
@@ -72,15 +74,6 @@ Result:
                   public 'code_three' => string 'amh' (length=3)
                   public 'lds_xml_code' => string '506' (length=3)
                   public 'android_sdk_version' => string '14' (length=2)
-              3 =>
-                object(stdClass)[39]
-                  public 'id' => int 64
-                  public 'name' => string 'Apache' (length=6)
-                  public 'eng_name' => string 'Apache' (length=6)
-                  public 'code' => string 'ap' (length=2)
-                  public 'code_three' => string 'apw' (length=3)
-                  public 'lds_xml_code' => string '012' (length=3)
-                  public 'android_sdk_version' => string '10' (length=2)
               …etc.
           public 'count' => int 107
           public 'success' => boolean true
@@ -100,7 +93,7 @@ List of valid platforms for which the library exists.
         var_dump($results);
     ?>
 
-Result:
+Example return:
 
 .. code-block:: php
 
@@ -109,101 +102,18 @@ Result:
           public 'platforms' =>
             array (size=16)
               0 =>
-                object(stdClass)[36]
-                  public 'id' => int 4
-                  public 'name' => string 'Android' (length=7)
-                  public 'extension' => string 'db' (length=2)
-                  public 'catalog_version' => string '1000' (length=4)
-              1 =>
-                object(stdClass)[38]
-                  public 'id' => int 17
-                  public 'name' => string 'AndroidGospelLibrary' (length=20)
-                  public 'extension' => string 'zbook' (length=5)
-                  public 'catalog_version' => string '1002' (length=4)
-              2 =>
-                object(stdClass)[33]
-                  public 'id' => int 14
-                  public 'name' => string 'AndroidGospelStudy' (length=18)
-                  public 'extension' => string 'zbook' (length=5)
-                  public 'catalog_version' => string '1001' (length=4)
-              3 =>
-                object(stdClass)[39]
-                  public 'id' => int 3
-                  public 'name' => string 'Blackberry Apps' (length=15)
-                  public 'extension' => string 'jad' (length=3)
-                  public 'catalog_version' => string '1000' (length=4)
-              4 =>
-                object(stdClass)[31]
-                  public 'id' => int 9
-                  public 'name' => string 'Blackberry Minimized Content' (length=28)
-                  public 'extension' => string 'gz' (length=2)
-                  public 'catalog_version' => string '1000' (length=4)
-              5 =>
-                object(stdClass)[32]
-                  public 'id' => int 2
-                  public 'name' => string 'ePub' (length=4)
-                  public 'extension' => string 'epub' (length=4)
-                  public 'catalog_version' => string '1000' (length=4)
-              6 =>
                 object(stdClass)[27]
                   public 'id' => int 1
                   public 'name' => string 'iPhone' (length=6)
                   public 'extension' => string 'zbook' (length=5)
                   public 'catalog_version' => string '1000' (length=4)
-              7 =>
-                object(stdClass)[21]
-                  public 'id' => int 6
-                  public 'name' => string 'Kindle' (length=6)
-                  public 'extension' => string 'zip' (length=3)
-                  public 'catalog_version' => string '1000' (length=4)
-              8 =>
-                object(stdClass)[20]
-                  public 'id' => int 16
-                  public 'name' => string 'ScirpturesTestIOSUPdate' (length=23)
-                  public 'extension' => string 'zbook' (length=5)
-                  public 'catalog_version' => string '1000' (length=4)
-              9 =>
-                object(stdClass)[18]
-                  public 'id' => int 11
-                  public 'name' => string 'ScriptureTestAndroid' (length=20)
-                  public 'extension' => string 'zbook' (length=5)
-                  public 'catalog_version' => string '1000' (length=4)
-              10 =>
-                object(stdClass)[40]
-                  public 'id' => int 15
-                  public 'name' => string 'ScriptureTestBlackBerry' (length=23)
-                  public 'extension' => string 'gz' (length=2)
-                  public 'catalog_version' => string '1000' (length=4)
-              11 =>
-                object(stdClass)[35]
-                  public 'id' => int 12
-                  public 'name' => string 'ScriptureTestIOS' (length=16)
-                  public 'extension' => string 'zbook' (length=5)
-                  public 'catalog_version' => string '1000' (length=4)
-              12 =>
+              1 =>
                 object(stdClass)[16]
                   public 'id' => int 10
                   public 'name' => string 'WebOS' (length=5)
                   public 'extension' => string 'json' (length=4)
                   public 'catalog_version' => string '1000' (length=4)
-              13 =>
-                object(stdClass)[34]
-                  public 'id' => int 7
-                  public 'name' => string 'Windows Mobile 6.x Applications' (length=31)
-                  public 'extension' => string 'cab' (length=3)
-                  public 'catalog_version' => string '1000' (length=4)
-              14 =>
-                object(stdClass)[17]
-                  public 'id' => int 5
-                  public 'name' => string 'Windows Mobile 7' (length=16)
-                  public 'extension' => string 'zip' (length=3)
-                  public 'catalog_version' => string '1000' (length=4)
-              15 =>
-                object(stdClass)[25]
-                  public 'id' => int 8
-                  public 'name' => string 'Windows Phone' (length=13)
-                  public 'extension' => string 'zip' (length=3)
-                  public 'catalog_version' => string '1000' (length=4)
+          …etc.
           public 'count' => int 16
           public 'success' => boolean true
     ?>
@@ -221,7 +131,7 @@ List of the catalog content for the specified language and platform.
         print_r($results);
     ?>
 
-Result:
+Example return:
 
 .. code-block:: php
 
@@ -328,7 +238,7 @@ Date the catalog for a specified language and platform was last updated.
         var_dump($results);
     ?>
 
-Result:
+Example return:
 
 .. code-block:: php
 
@@ -352,7 +262,7 @@ List of books updated since a given date for the specified language and platform
         var_dump($results);
     ?>
 
-Result:
+Example return:
 
 .. code-block:: php
 

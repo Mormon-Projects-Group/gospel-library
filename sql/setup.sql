@@ -5,6 +5,18 @@ CREATE TABLE `bookVersions` (
   PRIMARY KEY (`id`)
 );
 
+DROP TABLE IF EXISTS `folders`;
+CREATE TABLE `folders` (
+  `id` integer(11) NOT NULL,
+  `parentFolderId` integer(11),
+  `languageId` integer(11),
+  `name` text(100),
+  `displayOrder` integer(11),
+  `englishName` text(100),
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (parentFolderId) REFERENCES "folders" (id) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
 DROP TABLE IF EXISTS `books`;
 CREATE TABLE `books` (
   `id` integer(11) NOT NULL,
@@ -25,8 +37,6 @@ CREATE TABLE `books` (
   `obsolete` integer(1),
   `size` integer(100),
   `sizeIndex` integer(100),
-  "zbook" blob,
-  "json" blob,
   PRIMARY KEY (`id`),
   FOREIGN KEY (folderId) REFERENCES "folders" (id) ON UPDATE CASCADE ON DELETE CASCADE
 );
@@ -43,21 +53,8 @@ CREATE TABLE `files` (
   `title` text(100),
   `url` text(100),
   `size` integer(100),
-  `file` blob,
   PRIMARY KEY (`id`),
   FOREIGN KEY (bookId) REFERENCES "books" (id) ON UPDATE CASCADE ON DELETE CASCADE
-);
-
-DROP TABLE IF EXISTS `folders`;
-CREATE TABLE `folders` (
-  `id` integer(11) NOT NULL,
-  `parentFolderId` integer(11),
-  `languageId` integer(11),
-  `name` text(100),
-  `displayOrder` integer(11),
-  `englishName` text(100),
-  PRIMARY KEY (`id`),
-  FOREIGN KEY (parentFolderId) REFERENCES "folders" (id) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 DROP TABLE IF EXISTS `languages`;
