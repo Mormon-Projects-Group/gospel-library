@@ -1,4 +1,4 @@
-|TravisCI|_ |Scrutinizer|_ |StyleCI|_ |Packagist|_ |MIT License|_
+|TravisCI|_ |Scrutinizer|_ |Code Climate|_ |StyleCI|_ |Packagist|_ |MIT License|_
 
 ==================
 LDS Gospel Library
@@ -350,6 +350,9 @@ Contribute
 
 .. |Scrutinizer| image:: https://img.shields.io/scrutinizer/g/Mormon-Projects-Group/gospel-library.svg?style=flat-square&label=Code%20Quality
 .. _Scrutinizer: https://scrutinizer-ci.com/g/Mormon-Projects-Group/gospel-library/
+
+.. |Code Climate| image:: https://img.shields.io/codeclimate/maintainability/Mormon-Projects-Group/gospel-library.svg?style=flat-square&label=Maintainability
+.. _Code Climate: https://codeclimate.com/github/Mormon-Projects-Group/gospel-library
 
 .. |StyleCI| image:: https://styleci.io/repos/115206912/shield?branch=master
 .. _StyleCI: https://styleci.io/repos/115206912
