@@ -4,19 +4,19 @@ Contributing
 
 Contributions are **welcome** and will be fully **credited**.
 
-We accept contributions via Pull Requests on `Github <https://github.com/jaredhowland/contacts>`_.
+We accept contributions via Pull Requests on `Github <https://github.com/Mormon-Projects-Group/gospel-library>`_.
 
 
 Pull Requests
 =============
 
-- **Adhere to `PSR-2 Coding Standard <https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md>`_**.
+- **Adhere to** `PSR-2 Coding Standard <https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md>`_.
 
-- **Add tests!** - Your patch won't be accepted if it doesn't have tests.
+- **Add tests** - Your patch won't be accepted if it doesn't have tests.
 
 - **Document any change in behaviour** - Make sure the `README.md` and any other relevant documentation are kept up-to-date.
 
-- **Consider our release cycle** - We try to follow `SemVer v2.0.0 <http://semver.org/>_. Randomly breaking public APIs is not an option.
+- **Consider our release cycle** - We try to follow `SemVer v2.0.0 <http://semver.org/>`_. Randomly breaking public APIs is not an option.
 
 - **Create feature branches** - Don't ask us to pull from your master branch.
 

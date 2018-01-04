@@ -3,7 +3,7 @@
 ==================
 LDS Gospel Library
 ==================
-**This project is not affiliated with, nor endorsed by, the** `LDS Church <https://www.lds.org/>`_
+**This project is not affiliated with, nor endorsed by, the** `LDS Church <https://www.lds.org/>`_.
 
 This small PHP library allows easy access to the `Gospel Library Web Services <https://tech.lds.org/wiki/Gospel_Library_Catalog_Web_Service>`_. These services only provide API access to the content of the library and not any of the features (like searching, highlighting, notes, tags, and bookmarks).
 
@@ -345,17 +345,17 @@ Contribute
 * Issue Tracker: https://github.com/Mormon-Projects-Group/gospel-library/issues
 * Source Code: https://github.com/Mormon-Projects-Group/gospel-library
 
-.. |TravisCI| image:: https://img.shields.io/travis/Mormon-Projects-Group/gospel-library/master.svg?style=flat-square&label=Travis%20CI%20Build
+.. |TravisCI| image:: https://img.shields.io/travis/Mormon-Projects-Group/gospel-library/master.svg?style=flat-square&label=Build
 .. _TravisCI: https://travis-ci.org/Mormon-Projects-Group/gospel-library
 
-.. |Scrutinizer| image:: https://img.shields.io/scrutinizer/g/Mormon-Projects-Group/gospel-library.svg?style=flat-square&label=Scrutinizer%20Code%20Quality
+.. |Scrutinizer| image:: https://img.shields.io/scrutinizer/g/Mormon-Projects-Group/gospel-library.svg?style=flat-square&label=Code%20Quality
 .. _Scrutinizer: https://scrutinizer-ci.com/g/Mormon-Projects-Group/gospel-library/
 
-.. |StyleCI| image:: https://styleci.io/repos/115206912/shield?branch=master
+.. |StyleCI| image:: https://styleci.io/repos/115206912/shield?branch=master&label=PSR-2
 .. _StyleCI: https://styleci.io/repos/115206912
 
 .. |Packagist| image:: https://img.shields.io/packagist/v/Mormon-Projects-Group/gospel-library.svg?style=flat-square&label=Packagist
 .. _Packagist: https://packagist.org/packages/Mormon-Projects-Group/gospel-library
 
-.. |MIT License| image:: https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square
+.. |MIT License| image:: https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square&label=License
 .. _MIT License: LICENSE.rst
