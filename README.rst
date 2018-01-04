@@ -345,16 +345,16 @@ Contribute
 * Issue Tracker: https://github.com/Mormon-Projects-Group/gospel-library/issues
 * Source Code: https://github.com/Mormon-Projects-Group/gospel-library
 
-.. |TravisCI| image:: https://img.shields.io/travis/Mormon-Projects-Group/gospel-library/master.svg?style=flat-square
+.. |TravisCI| image:: https://img.shields.io/travis/Mormon-Projects-Group/gospel-library/master.svg?style=flat-square&label=Travis%20CI%20Build
 .. _TravisCI: https://travis-ci.org/Mormon-Projects-Group/gospel-library
 
-.. |Scrutinizer| image:: https://img.shields.io/scrutinizer/g/Mormon-Projects-Group/gospel-library.svg?style=flat-square
+.. |Scrutinizer| image:: https://img.shields.io/scrutinizer/g/Mormon-Projects-Group/gospel-library.svg?style=flat-square&label=Scrutinizer%20Code%20Quality
 .. _Scrutinizer: https://scrutinizer-ci.com/g/Mormon-Projects-Group/gospel-library/
 
 .. |StyleCI| image:: https://styleci.io/repos/115206912/shield?branch=master
 .. _StyleCI: https://styleci.io/repos/115206912
 
-.. |Packagist| image:: https://img.shields.io/packagist/v/Mormon-Projects-Group/gospel-library.svg?style=flat-square
+.. |Packagist| image:: https://img.shields.io/packagist/v/Mormon-Projects-Group/gospel-library.svg?style=flat-square&label=Packagist
 .. _Packagist: https://packagist.org/packages/Mormon-Projects-Group/gospel-library
 
 .. |MIT License| image:: https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square
