@@ -1,8 +1,8 @@
 /tests             export-ignore
 /docs              export-ignore
-/docs              linguist-documentation
+docs/*             linguist-documentation
 /phpdocs           export-ignore
-/phpdocs           linguist-documentation
+phpdocs/*          linguist-documentation
 /examples          export-ignore
 .github            export-ignore
 .travis.yml        export-ignore

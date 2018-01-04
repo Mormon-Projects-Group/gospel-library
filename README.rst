@@ -7,7 +7,7 @@ LDS Gospel Library
 
 This small PHP library allows easy access to the `Gospel Library Web Services <https://tech.lds.org/wiki/Gospel_Library_Catalog_Web_Service>`_. These services only provide API access to the content of the library and not any of the features (like searching, highlighting, notes, tags, and bookmarks).
 
-The web services only provide metadata about content in the Gospel Library. This project provides access to the metadata but **not to any actual content**. Intellectual Reserve, Inc. owns the copyright for all materials found in the Gospel Library.
+The web services only provide metadata about content in the Gospel Library. This project provides access to the metadata but **not to any actual content**. Intellectual Reserve, Inc. owns the copyright for all content in the Gospel Library.
 
 =====================
 Gospel Library Client
@@ -74,7 +74,7 @@ Example return:
                   public 'code_three' => string 'amh' (length=3)
                   public 'lds_xml_code' => string '506' (length=3)
                   public 'android_sdk_version' => string '14' (length=2)
-              …etc.
+          …etc.
           public 'count' => int 107
           public 'success' => boolean true
           public 'date_changed' => string '2018-01-03 05:00:00' (length=19)
