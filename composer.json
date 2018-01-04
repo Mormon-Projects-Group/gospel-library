@@ -1,5 +1,5 @@
 {
-  "name": "Mormon-Projects-Group/gospel-library",
+  "name": "mormon-projects-group/gospel-library",
   "description": "PHP library to access the LDS Gospel Library web service",
   "keywords": ["lds","mormon","gospel library","scriptures"],
   "homepage": "http://github.com/Mormon-Projects-Group/gospel-library",
