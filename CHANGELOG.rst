@@ -38,6 +38,15 @@ Security
 - Nothing
 
 *****
+0.1.1
+*****
+
+FIXED
+-----
+
+- Composer package name
+
+*****
 0.1.0
 *****
 
@@ -49,28 +58,3 @@ Added
 - phpDocumentor documentation
 - Brief overview of use in the README.rst file
 - Automated code checking with Travis-CI and StyleCI
-
-Changed
--------
-
-- Nothing
-
-Deprecated
-----------
-
-- Nothing
-
-Removed
--------
-
-- Nothing
-
-Fixed
------
-
-- Nothing
-
-Security
---------
-
-- Nothing
