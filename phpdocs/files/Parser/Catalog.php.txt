@@ -42,7 +42,7 @@ class Catalog
     public function __construct(\stdClass $object)
     {
         $this->object = $object;
-        $this->catalogData = $object->catalog->folders;
+        $this->catalogData = $object->results->catalog->folders;
         $this->parseData();
     }
 
@@ -55,7 +55,7 @@ class Catalog
      */
     public function getSuccessStatus(): bool
     {
-        return $this->object->success;
+        return $this->object->results->success;
     }
 
     /**
@@ -69,7 +69,7 @@ class Catalog
      */
     public function getModifiedDate(): \DateTime
     {
-        $date = $this->object->catalog->date_changed;
+        $date = $this->object->results->catalog->date_changed;
         $dateObject = \DateTime::createFromFormat('Y-m-d H:i:s', $date);
         $errors = \DateTime::getLastErrors();
         if ($dateObject !== false && empty($errors['warning_count'])) {
@@ -88,7 +88,7 @@ class Catalog
      */
     public function getCatalogName(): string
     {
-        return $this->object->catalog->name;
+        return $this->object->results->catalog->name;
     }
 
     /**
@@ -143,7 +143,7 @@ class Catalog
     {
         $object = empty($object) ? $this->catalogData : $object;
         foreach ($object as $folder) {
-            $this->folders[$folder->id] = (object)['parentFolderId' => $parentFolderId, 'languageId' => @$folder->landguageid, 'name' => $folder->name, 'displayOrder' => $folder->display_order, 'englishName' => $folder->eng_name];
+            $this->folders[$folder->id] = (object)['parentFolderId' => $parentFolderId, 'languageId' => $this->object->args['languageid'], 'platformId' => $this->object->args['platformid'], 'name' => $folder->name, 'displayOrder' => $folder->display_order, 'englishName' => $folder->eng_name];
             $this->parseBooks((object)$folder->books, $folder->id);
             if (!empty($folder->folders)) {
                 $this->parseData((object)$folder->folders, $folder->id);

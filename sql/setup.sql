@@ -25,7 +25,8 @@ CREATE TABLE `books` (
   `obsolete` integer(1),
   `size` integer(100),
   `sizeIndex` integer(100),
-  `book` blob,
+  "zbook" blob,
+  "json" blob,
   PRIMARY KEY (`id`),
   FOREIGN KEY (folderId) REFERENCES "folders" (id) ON UPDATE CASCADE ON DELETE CASCADE
 );
