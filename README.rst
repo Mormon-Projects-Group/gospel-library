@@ -426,6 +426,9 @@ Parses data returned by the ``catalogQuery()`` method.
         $files = $parser->getFiles();
     ?>
 
+.. note::
+    The same book will have a different ID number if it is a different language but not if it is a different platform. For example, the English Book of Mormon has an ID of ``95`` while the Spanish edition has an ID of ``1686``. However, both the ``.zbook`` and ``.json`` versions of the Book of Mormon share an ID of ``95``.
+
 ==========
 Contribute
 ==========

@@ -133,6 +133,6 @@ class Client
         $args = array_merge(['action' => $action], $args, ['format' => 'json']);
         $json = $this->getUrl(Config::get('base'), $args);
 
-        return json_decode($json);
+        return (object)['args' => $args, 'results' => json_decode($json)];
     }
 }
