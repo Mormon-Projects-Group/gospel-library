@@ -5,9 +5,9 @@ LDS Gospel Library
 ==================
 **This project is not affiliated with, nor endorsed by, the** `LDS Church <https://www.lds.org/>`_.
 
-This small PHP library allows easy access to the `Gospel Library Web Services <https://tech.lds.org/wiki/Gospel_Library_Catalog_Web_Service>`_. These services only provide API access to the content of the library and not any of the features (like searching, highlighting, notes, tags, and bookmarks).
+This small PHP library allows easy access to the `Gospel Library Web Services <https://tech.lds.org/wiki/Gospel_Library_Catalog_Web_Service>`_. These services only provide access to the metadata of the library and not any of the content or features (like searching, highlighting, notes, tags, and bookmarks).
 
-The web services only provide metadata about content in the Gospel Library. This project provides access to the metadata but **not to any actual content**. Intellectual Reserve, Inc. owns the copyright for all content in the Gospel Library.
+This project provides access to the metadata but **not to any actual content**. Intellectual Reserve, Inc. owns the copyright for all content in the Gospel Library.
 
 =====================
 Gospel Library Client

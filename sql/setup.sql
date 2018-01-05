@@ -1,15 +1,9 @@
-DROP TABLE IF EXISTS `bookVersions`;
-CREATE TABLE `bookVersions` (
-  `id` integer(11) NOT NULL,
-  `version` integer(11) NOT NULL,
-  PRIMARY KEY (`id`)
-);
-
 DROP TABLE IF EXISTS `folders`;
 CREATE TABLE `folders` (
   `id` integer(11) NOT NULL,
   `parentFolderId` integer(11),
   `languageId` integer(11),
+  `platformId` integer(11),
   `name` text(100),
   `displayOrder` integer(11),
   `englishName` text(100),
@@ -78,3 +72,9 @@ CREATE TABLE `platforms` (
   `catalogVersion` integer(11) NOT NULL,
   PRIMARY KEY (`id`)
 );
+
+
+DROP VIEW IF EXISTS `folderNestingLevel`;
+CREATE VIEW `folderNestingLevel` AS SELECT
+  COUNT(DISTINCT(`parentFolderId`)) AS `folderNestingLevel`
+  FROM `folders`;
