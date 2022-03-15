@@ -101,8 +101,10 @@ class Client
     {
         $lastdate = date('Y-m-d', strtotime($lastdate));
 
-        return $this->getApiArray('book.versions',
-            ['languageid' => $languageid, 'platformid' => $platformid, 'lastdate' => $lastdate]);
+        return $this->getApiArray(
+            'book.versions',
+            ['languageid' => $languageid, 'platformid' => $platformid, 'lastdate' => $lastdate]
+        );
     }
 
     /**
