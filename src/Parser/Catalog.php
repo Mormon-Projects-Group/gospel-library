@@ -1,4 +1,6 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 /**
  * Catalog parser class for parsing catalog JSON
@@ -75,7 +77,7 @@ class Catalog
         if ($dateObject !== false && empty($errors['warning_count'])) {
             return $dateObject;
         } else {
-            throw new GospelException('Invalid date used for `getModifiedDate` in class `'.__CLASS__.'``: '.$date);
+            throw new GospelException('Invalid date used for `getModifiedDate` in class `' . __CLASS__ . '``: ' . $date);
         }
     }
 

@@ -1,4 +1,6 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 /**
  * GospelException class for `Gospel` namespace. Extends global `Exception` class.
