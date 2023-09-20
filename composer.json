@@ -22,12 +22,12 @@
     }
   ],
   "require": {
-    "php": "^7.0",
-    "guzzlehttp/guzzle": "^6.0"
+    "php": "^8.0",
+    "guzzlehttp/guzzle": "^7.0"
   },
   "require-dev": {
-    "phpdocumentor/phpdocumentor": "2.*",
-    "phpunit/phpunit": "^6.5"
+    "phpdocumentor/phpdocumentor": "3.*",
+    "phpunit/phpunit": "^10.0"
   },
   "scripts": {
     "test": "./vendor/bin/phpunit",
